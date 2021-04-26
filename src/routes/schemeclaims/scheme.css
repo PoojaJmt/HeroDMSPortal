@@ -1,0 +1,301 @@
+.table-responsive {
+    display: block;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.MuiCard-root {
+    overflow: hidden;
+    width: 87%;
+    margin: auto;
+    padding: 44px;
+}
+.MuiTableHead-root {
+    display: table-header-group;
+    box-shadow: 2px 4px 8px -2px rgba(0,0,0,0.2);
+    border: 2px solid lightgrey;
+    border-radius: 8px;
+}
+
+.MuiInput-root {
+    position: relative;
+    display: none !important;
+}
+.MuiPaper-elevation2{
+    box-shadow: none !important;
+    border: 1px solid white;
+}
+.MuiTypography-h6 {
+    font-size: 1.25rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+    display: none;
+}
+.MuiTable-root {
+    width: 100%;
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse;
+    /* box-shadow: 2px 4px 8px -2px rgba(0,0,0,0.2); */
+}
+.MuiInput-root {
+    position: relative;
+    display: none;
+}
+.MuiTableCell-root {
+    display: table-cell;
+    padding: 4px !important;
+    font-size: 13px !important;
+    text-align: left;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    /* border-bottom: 1px solid rgba(224, 224, 224, 1); */
+    letter-spacing: 0.01071em;
+    vertical-align: inherit;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: rgb(228, 33, 38) !important;
+    background-color: #fff;
+    font-size: 19px;
+    border-color: 1px solid lightgrey !important;
+    font-weight: 600;
+    border-bottom: 3px solid rgb(228, 33, 38) !important;
+}
+.nav-tabs {
+     border-bottom: 1px solid lightgrey !important;
+     margin-left: -37px;
+}
+.nav-tabs .nav-link {
+    margin-bottom: -1px;
+    /* border: 1px solid transparent; */
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    font-size: 19px;
+    color: grey;
+    font-weight: 600;
+}
+.MuiTableSortLabel-root {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: inherit;
+    justify-content: flex-start;
+    font-size: 12px;
+    font-weight: 600 !important;
+}
+.tab-content{
+    margin-left: -39px;
+    margin-right: -24px;
+}
+.MuiTableRow-root {
+    color: inherit;
+    display: table-row;
+    outline: 0;
+    vertical-align: middle;
+    /* height: 44px; */
+}
+.schemecontainer{
+    margin-bottom: 50px;
+}
+.scheme-table{
+    margin: 30px auto;
+    width: 80%;
+    margin-left: 191px;
+}
+.trpadding{
+    padding-top: 21px;
+    font-size: 12px;
+}
+.resubmit-btn {
+    background: rgb(228, 33, 38) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px rgb(228, 33, 38);
+    border-radius: 4px;
+    height: 38px;
+    padding: 0 10px;
+    float: right;
+    color: white;
+    width: 130px;
+    border: 1px solid rgb(228, 33, 38);
+}
+.heading{
+    color: rgb(185, 184, 184);
+    font-size: 14px;
+}
+.subline{
+    color: black;
+    font-size: 14px;
+}
+.card-title {
+    margin-bottom: 2.75rem;
+    color: rgb(228, 33, 38);
+}
+#hrline{
+    font-weight: 600px;
+    border-color: rgb(228, 33, 38);
+    height: 5px;
+    width: 14%;
+    text-align: left;
+    margin-left: -4px;
+    margin-top: -7px;
+}
+.creditcard{
+    margin-left: 0px;
+    margin-top: -4px;
+}
+.creditcardpadding{
+    width: 325px;
+    height: 47px;
+}
+.creditcardbody{
+    padding-top: 10px !important;
+    box-shadow: 3px 3px 5px #aaaaaa;
+}
+.teamcardbody{
+    padding-top: 6px !important;
+    height: 100px;
+    font-size: 12px;
+    box-shadow: 3px 3px 5px #aaaaaa;
+}
+
+.step { 
+    position: relative; 
+    min-height: 32px /* circle-size */ ; 
+}
+.step > div:first-child { 
+    position: static; 
+    height: 0;
+ }
+.step > div:last-child { 
+    margin-left: 32px ;
+     padding-left: 16px;
+}
+.circle { 
+    background-color: white;
+    border: 3px solid #FFF;
+    border-radius: 18px;
+    box-shadow: 0 0 0 5px #888;
+    height: 19px;
+    width: 19px;
+}
+.circlegreen { 
+    background-color: white;
+    border: 3px solid #FFF;
+    border-radius: 18px;
+    box-shadow: 0 0 0 5px #50db50;
+    height: 19px;
+    width: 19px;
+}
+.line { 
+    position: absolute;
+    border-left: 2px solid gainsboro;
+    left: 8px;
+    bottom: 1px;
+    top: 23px;
+}
+.step:last-child .line { 
+    display: none; 
+}
+.title { 
+    line-height: 25px;
+    font-weight: bold;
+    font-size: 13px;
+    color: black;
+    margin-bottom: 20px;
+}
+.body{
+    padding-bottom: 3px;
+}
+.MTableToolbar-root-5 {
+    margin-top: -14px;
+}
+.contentBlock-0-2-3 {
+    margin-top: 28px !important;
+}
+.MuiTableCell-footer {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 0.75rem;
+    line-height: 1.3125rem;
+    display: none !important;
+}
+.MuiPaginationItem-page.Mui-selected {
+    background-color: rgb(228, 33, 38) !important;
+    color: white;
+}
+.MuiPagination-root{
+    width: 32%;
+    margin: auto;
+    margin-top: 20px;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    box-shadow: 3px 3px 5px #aaaaaa;
+}
+a{
+    font-size: 13px;
+    padding-top: 16px;
+    color: rgb(228, 33, 38);
+}
+.linkfile{
+    color: rgb(228, 33, 38);
+}
+.MuiIconButton-label {
+    width: 100%;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+    margin-right: 30px;
+}
+.MuiIconButton-root:hover {
+     background-color: transparent !important; 
+}
+.MuiButtonBase-root .MuiIconButton-root{
+    transform: rotate(0deg) !important;
+}
+.MuiTouchRipple-root {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+    position: inherit !important;
+    border-radius: inherit !important;
+    pointer-events: none;
+}
+
+.MuiTableCell-body {
+    color: rgba(0, 0, 0, 0.87);
+    border: 1px solid white !important;
+}
+.MuiTableRow-head{
+    height: 51px !important;
+}
+.MuiPaper-elevation1 {
+     box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 20%), 0px 0px 0px 0px rgb(0 0 0 / 14%), 0px 0px 0px 0px rgb(0 0 0 / 12%) !important; 
+}
+.tabspadding{
+    padding-bottom: 40px;
+    padding-top: 29px;
+}
+.MuiGrid-grid-xs-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-left: 37px !important;
+}
+.MuiTableContainer-root {
+    width: 98% !important;
+    overflow-x: auto;
+}

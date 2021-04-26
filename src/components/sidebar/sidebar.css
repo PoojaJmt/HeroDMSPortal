@@ -1,0 +1,27 @@
+.logo-main{
+    background-color: #FAFBFC;
+    padding:30px 20px;
+}
+.menuitem{
+    display: block;
+    margin:20px 10px 0 10px;
+    border-radius: 5px;
+    
+    
+}
+.menuitem:hover span {
+    color: #E42126 ;
+    
+}
+.menuitem:hover i{
+    color: #E42126 !important ;
+}
+.outl{
+    height: 2px;
+    background-color: #fff;
+    width: 70%;
+    display: block;
+    margin:-5px auto 0 auto;
+    border:none !important;
+    border-color: #fff !important;
+}
