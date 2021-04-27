@@ -1,0 +1,2 @@
+(this["webpackJsonphero-dms"]=this["webpackJsonphero-dms"]||[]).push([[4],{930:function(e,n,t){"use strict";t.r(n);var l=t(0),r=t.n(l),a=t(74);t(58);var o=function(){return r.a.createElement(a.Column,null,r.a.createElement("h5",null,"Hello world"))};n.default=o}}]);
+//# sourceMappingURL=4.892d7664.chunk.js.map

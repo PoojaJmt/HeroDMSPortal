@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9512d0e3.chunk.css",
+    "main.js": "/static/js/main.f9983a9e.chunk.js",
+    "main.js.map": "/static/js/main.f9983a9e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.45fe8987.js",
+    "runtime-main.js.map": "/static/js/runtime-main.45fe8987.js.map",
+    "static/css/2.ec23544f.chunk.css": "/static/css/2.ec23544f.chunk.css",
+    "static/js/2.247fbaf2.chunk.js": "/static/js/2.247fbaf2.chunk.js",
+    "static/js/2.247fbaf2.chunk.js.map": "/static/js/2.247fbaf2.chunk.js.map",
+    "static/js/3.d6c67765.chunk.js": "/static/js/3.d6c67765.chunk.js",
+    "static/js/3.d6c67765.chunk.js.map": "/static/js/3.d6c67765.chunk.js.map",
+    "static/js/4.892d7664.chunk.js": "/static/js/4.892d7664.chunk.js",
+    "static/js/4.892d7664.chunk.js.map": "/static/js/4.892d7664.chunk.js.map",
+    "static/js/5.2139a059.chunk.js": "/static/js/5.2139a059.chunk.js",
+    "static/js/5.2139a059.chunk.js.map": "/static/js/5.2139a059.chunk.js.map",
+    "static/js/6.a9b65474.chunk.js": "/static/js/6.a9b65474.chunk.js",
+    "static/js/6.a9b65474.chunk.js.map": "/static/js/6.a9b65474.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.348794602ae8da1d5e8d1874bbd7ce37.js": "/precache-manifest.348794602ae8da1d5e8d1874bbd7ce37.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.ec23544f.chunk.css.map": "/static/css/2.ec23544f.chunk.css.map",
+    "static/css/main.9512d0e3.chunk.css.map": "/static/css/main.9512d0e3.chunk.css.map",
+    "static/js/2.247fbaf2.chunk.js.LICENSE.txt": "/static/js/2.247fbaf2.chunk.js.LICENSE.txt",
+    "static/js/3.d6c67765.chunk.js.LICENSE.txt": "/static/js/3.d6c67765.chunk.js.LICENSE.txt",
+    "static/js/5.2139a059.chunk.js.LICENSE.txt": "/static/js/5.2139a059.chunk.js.LICENSE.txt",
+    "static/js/6.a9b65474.chunk.js.LICENSE.txt": "/static/js/6.a9b65474.chunk.js.LICENSE.txt",
+    "static/media/Hero-Electric-Bike-Logo-PNG.png": "/static/media/Hero-Electric-Bike-Logo-PNG.9f9a0334.png",
+    "static/media/font-awesome.min.css": "/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/scooty.png": "/static/media/scooty.ea577ea5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45fe8987.js",
+    "static/css/2.ec23544f.chunk.css",
+    "static/js/2.247fbaf2.chunk.js",
+    "static/css/main.9512d0e3.chunk.css",
+    "static/js/main.f9983a9e.chunk.js"
+  ]
+}
