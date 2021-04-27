@@ -1,0 +1,78 @@
+a:hover{
+    text-decoration: none !important;
+}
+.customer-table tr td,
+.customer-table thead tr th {
+  text-align: center;
+}
+.customer-info-box {
+  background-color: #f7dbdc;
+  border: 1px solid #f7c1c4;
+  border-radius: 4px;
+  padding:10px;
+  max-width: 350px;
+  margin-top:30px;
+}
+
+.customer-info-box-left{
+  font-size: 18px;
+  text-align: left;
+  color: #43425D;
+
+}
+.customer-info-box p{
+    margin:0;
+    padding:2px;
+}
+.customer-info-box-right{
+    text-align: right;
+    color: #E42126;
+    font-size: 18px;
+}
+.customer-info-page .MuiBox-root{
+  padding:0 !important
+}
+.form-control:focus{
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+}
+.image-holder{
+  height: 85px;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+  border-radius: 4px;
+  position: relative;
+}
+.upload-btn{
+ overflow: hidden;
+ background-color: #E42126;
+ color: #ffffff;
+ width: 150px;
+ position: absolute;
+  bottom:0;
+z-index: 90;
+right: 0;
+margin:10px;
+border:none;
+padding:5px 0;
+box-shadow: 0px 5px 10px #E825835E;
+}
+.upload-btn-input{
+  position: absolute;
+  bottom:10px;
+  right:10px;
+ opacity: 0;
+ z-index: 100;
+ width: 150px;
+
+}
+.btn-submit{
+  display: block;
+  background:#C50404 ;
+  margin:15px auto;
+  color: #fff;
+  font-size: 16px;
+  padding:5px 55px;
+  border-radius: 5px;
+  border:none;
+}

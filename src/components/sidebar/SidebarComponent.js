@@ -80,6 +80,8 @@ function SidebarComponent() {
       <MenuItem
       title="Customers"
       icon="fa fa-users"
+      id={SLUGS.customers}
+      onClick={()=>onClick(SLUGS.customers)}
       />
       <MenuItem
       title="Orders"
@@ -103,7 +105,7 @@ function SidebarComponent() {
         id={SLUGS.profile}
         title="Complaints"
         icon="fa fa-user"
-        onClick={() => onClick(SLUGS.profile)}
+        onClick={() => onClick(SLUGS.complaints)}
       />
       <MenuItem
       title="Dashboard"

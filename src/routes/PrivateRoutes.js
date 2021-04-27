@@ -5,11 +5,16 @@ import LoadingComponent from 'components/loading';
 import InvoicesComponent from './Invoices/InvoicesComponent';
 import InvoiceInfo from './Invoices/invoiceInfo';
 import InvoiceDownload from './Invoices/downloadInvoice';
-import ScheduleList from '../routes/schemeclaims/schemeList'
-import Resubmission from './schemeclaims/resubmission'
 import ClaimInfo from './schemeclaims/claimInfo'
 import ProductList from './products/productList';
 import ProductInfo from './products/productInfo';
+import SchemeList from '../routes/schemeclaims/schemeList';
+import CustomerComponent from './customers/customers';
+import CustomerInfo from './customers/customerInfo';
+import CustomerDetails from './customers/customerDetails';
+import ComplaintsList from './complaints/complaintsList';
+import ComplaintInfo from './complaints/complaintInfo';
+import NewComplaint from './complaints/newComplaint';
 
 const DashboardComponent = lazy(() => import('./dashboard'));
 
@@ -26,11 +31,17 @@ function PrivateRoutes() {
                 <Route exact path={SLUGS.invoiceInfo} component={InvoiceInfo}/>
                 <Route exact path={SLUGS.products} component={ProductList} />
                 <Route exact path={SLUGS.productInfo} component={ProductInfo}/>
-                <Route exact path={SLUGS.scheme} component={ScheduleList} />
-                <Route exact path={SLUGS.claimInfo} component={ClaimInfo}/>
-                <Route exact path={SLUGS.resubmission} component={Resubmission}/>
+                <Route exact path={SLUGS.scheme} component={SchemeList}/>
+             
+                <Route exact path={SLUGS.ClaimInfo} component={ClaimInfo}/>
+                <Route exact path={SLUGS.customers} component={CustomerComponent}/>
+                <Route exact path={SLUGS.customerInfo} component={CustomerInfo}/>
+                <Route exact path={SLUGS.customerDetails} component={CustomerDetails}/>
+                <Route exact path={SLUGS.complaints} component={ComplaintsList}/>
+                <Route exact path={SLUGS.complaintInfo} component={ComplaintInfo}/>
+                <Route exact path={SLUGS.newComplaint} component={NewComplaint}/>
 
-                <Route exact path={SLUGS.scheme} render={() => <div>sceheme claims</div>} />
+                
                 <Route exact path={SLUGS.profile} render={() => <div>profile</div>} />
                 
                 <Redirect to={SLUGS.home} />

@@ -20,13 +20,10 @@ border-radius: 4px;
     border-left: none;
 
 }
-.customer-table{
+/* .customer-table{
     margin:30px auto;
-}
-.customer-table thead{
-    background-color: #F5F6FA ;
-    
-}
+} */
+
 .customer-table thead tr th{
     font-size: 16px;
     font-weight: 700;
