@@ -1,0 +1,220 @@
+.firstcolumn{
+    background: transparent linear-gradient(180deg, #1482EF 0%, #0065C9 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 24px #122E752E;
+    opacity: 1;
+}
+.firstsubcolumn{
+    background: #117EEA;
+opacity: 0.12;
+}
+.secondcolumn{
+    background: transparent linear-gradient(0deg, #FF6F37 0%, #FF8F63 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 24px #122E752E;
+    opacity: 1;
+}
+.secondsubcolumn{
+    background: #117EEA;
+opacity: 0.12;
+}
+.thirdcolumn{
+    background: transparent linear-gradient(180deg, #FFDD26 0%, #FFBC31 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 24px #122E752E;
+    opacity: 1;
+}
+.thirdsubcolumn{
+    background: #117EEA ;
+opacity: 0.12;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: transparent;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.cardheading{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) 29px/38px Yu Gothic UI;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    text-align: left;
+    font: normal normal 600 29px/38px Yu Gothic UI;
+    letter-spacing: 0px;
+    color: #333333;
+    opacity: 1;
+    padding-top: 39px;
+    padding-left: 5px;
+    font-size: 24px;
+}
+.spanheading{
+    margin-left: 20px;
+    font-size: 24px;
+}
+.cardheight{
+    height: 89px;
+}
+.image{
+    color: white;
+    padding-top: 13px;
+    margin-top: 35px;
+    margin-left: 15px;
+    width: 25px;
+}
+.whitecircle{
+    background: white;
+    font-size: 0px;
+    text-align: center;
+    margin-left: 29px;
+    border-radius: 50%;
+    padding: -10px;
+    width: 53px;
+    height: 50px;
+}
+.leadsubheading{
+    color: #c0b9b9;
+    font-size: 14px;
+}
+.containerpadding{
+    padding-top: 50px;
+}
+.analysiscard{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 14px;
+}
+.textright{
+    text-align: right;
+}
+#hrline{
+    height: 2px;
+    width: 80;
+}
+.rowpadding{
+    padding-top: 20px;
+}
+.canvasjs-chart-credit{
+    display: none !important;
+}
+.resubmissioncircle{
+    background: #FFDD26;
+    font-size: 0px;
+    text-align: center;
+    margin-left: 21px;
+    border-radius: 50%;
+    padding: -10px;
+    width: 43px;
+    height: 43px;
+}
+.imagescheme{
+    padding-top: 8px;
+    color: white;
+    width: 27px;
+    margin-left: 8px;
+}
+.h3heading{
+    font-size: 21px;
+}
+.rejectedcircle{
+    background: #BD110C ;
+    font-size: 0px;
+    text-align: center;
+    margin-left: 21px;
+    border-radius: 50%;
+    padding: -10px;
+    width: 43px;
+    height: 43px;
+}
+.approvedcircle{
+    background: transparent linear-gradient(217deg, #7467F0 0%, #2896E9 100%) 0% 0% no-repeat padding-box;
+    font-size: 0px;
+    text-align: center;
+    margin-left: 21px;
+    border-radius: 50%;
+    padding: -10px;
+    width: 43px;
+    height: 43px;
+}
+.submittedcircle{
+    background: #2DCD7A  ;
+    font-size: 0px;
+    text-align: center;
+    margin-left: 21px;
+    border-radius: 50%;
+    padding: -10px;
+    width: 43px;
+    height: 43px;
+}
+.btn-floating{
+    position: absolute;
+    top: 13px;
+    right: -14px;
+    background: transparent linear-gradient(180deg, #E92867 0%, #F06767 100%) 0% 0% no-repeat padding-box !important;
+    height: 102px;
+    width: 8px;
+}
+.paragraphheading{
+    color: #c0b9b9;
+    line-height: 0.5rem;
+}
+.activitycard{
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 22px;
+    padding-left: 20px;
+    height: auto;
+}
+.rightarrow{
+    color: white;
+    font-size: 29px;
+    position: absolute;
+    margin-left: -15px;
+    margin-top: -13px;
+}
+.trialversiontab{
+    background-color: black;
+    margin-top: 50px;
+    height: 20px;
+    width: 120px;
+    position: absolute;
+}
+.chartlinecontainer{
+    height: 500px;
+    width: 100%;
+}
+.chartlinecontainerpadding{
+    height: 461px;
+    width: 100%;
+    margin-top: 57px;
+}
+.chartlinecontainerorder{
+    height: 461px;
+    width: 100%;
+}
+.chartdonughtcontainer{
+    height: 296px;
+    width: 100%;
+}
+.bgcard{
+ box-sizing: border-box;
+   background-image: url("../../assets/images//cardimg.jpg");
+    background-position: 0px -23px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 123px;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+  
+.flex-container > div {
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    width: 100%;
+}

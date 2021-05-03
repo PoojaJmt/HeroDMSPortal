@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Row } from "simple-flexbox";
 import './header.css'
+import * as FosIcons from 'react-icons/fa';
 
 function HeaderComponent() {
   // let title;
@@ -18,8 +19,8 @@ function HeaderComponent() {
 
   return (
     <Row className="header-title">
-      {/* <span className={classes.title}>{title}</span> */}
-      <h4 style={{ textAlign: "right" }}>Welcome, Ankur Garg</h4>
+      {/* <span className={classes.title}>{title}</span> */}                                                
+      <h4 style={{ textAlign: "right" }}>Welcome, Ankur Garg! <a href="/profile-data"><span className="profilecolour"><FosIcons.FaUserCircle className="profileimg" /> Profile</span></a></h4>
     </Row>
   );
 }
