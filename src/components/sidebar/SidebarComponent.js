@@ -2,7 +2,7 @@ import React from "react";
 import { createUseStyles, useTheme } from "react-jss";
 import { useHistory } from "react-router-dom";
 import SLUGS from "resources/slugs";
-import 'font-awesome/css/font-awesome.min.css';
+import "font-awesome/css/font-awesome.min.css";
 import { convertSlugToUrl } from "resources/utilities";
 import LogoComponent from "./LogoComponent";
 import Menu from "./MenuComponent";
@@ -75,17 +75,18 @@ function SidebarComponent() {
         title="Invoices"
         icon="fa fa-file"
         onClick={() => onClick(SLUGS.invoices)}
-        
       />
       <MenuItem
-      title="Customers"
-      icon="fa fa-users"
-      id={SLUGS.customers}
-      onClick={()=>onClick(SLUGS.customers)}
+        title="Customers"
+        icon="fa fa-users"
+        id={SLUGS.customers}
+        onClick={() => onClick(SLUGS.customers)}
       />
       <MenuItem
-      title="Orders"
-      icon="fa fa-cube"
+        title="Orders"
+        icon="fa fa-cube"
+        id={SLUGS.orders}
+        onClick={() => onClick(SLUGS.orders)}
       />
       <MenuItem
         id={SLUGS.scheme}
@@ -100,21 +101,18 @@ function SidebarComponent() {
         icon="fa fa-users"
         onClick={() => onClick(SLUGS.products)}
       />
-      
+
       <MenuItem
         id={SLUGS.profile}
         title="Complaints"
         icon="fa fa-user"
         onClick={() => onClick(SLUGS.complaints)}
       />
-      <MenuItem
-      title="Dashboard"
-      icon="fa fa-graph"
-      />
+      <MenuItem title="Dashboard" icon="fa fa-graph" />
 
       <div className={classes.separator}></div>
 
-      <MenuItem id="logout" title="Logout"  onClick={logout} />
+      <MenuItem id="logout" title="Logout" onClick={logout} />
     </Menu>
   );
 }

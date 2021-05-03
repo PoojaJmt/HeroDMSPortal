@@ -31,6 +31,7 @@ border-radius: 4px;
 .customer-table tbody tr td a{
     color: #E42126;
     cursor: pointer;
+    font-weight: bold;
 }
 .table-bordered td{
     border-top: none !important;
@@ -67,8 +68,16 @@ input[type="color"]:focus,
 .MuiAppBar-colorPrimary .Mui-selected{
     color: #E42126 !important;
 }
+.MuiCheckbox-colorSecondary.Mui-checked{
+    color: #E42126 !important;
+   
+}
+.MuiButton-containedSecondary{
+    background-color: #E42126 !important;
+}
 .invoice-dtl{
     background-color: #fff;
+    min-height: 70vh;
 }
 .invoice-dtl-tab .MuiBox-root{
     padding: 0 !important;
@@ -118,7 +127,13 @@ input[type="color"]:focus,
     font-weight: bold;
 }
 
-
+.inv-table tbody tr td{
+  padding:15px 10px 0 15px !important;
+}
+.inv-table tbody tr td a{
+    color: #E42126 ;
+    font-weight: bold;
+}
 
 /* invoice copy design */
 
@@ -172,9 +187,33 @@ input[type="color"]:focus,
     padding: 5px !important;
     text-align: center;
     font-size: 14px;
-    border-bottom: 2px solid #000;
-    border-right: none;
-    border-left: none;
+    border-right: 2px solid #000;
+   
+}
+
+.vehicle-invoice thead tr:first-child th:first-child,.vehicle-invoice thead tr:nth-child(2) th:first-child,
+.vehicle-invoice thead tr:first-child th:nth-child(3),.vehicle-invoice thead tr:nth-child(2) th:nth-child(9),
+.vehicle-invoice thead tr:first-child th:nth-child(4),.vehicle-invoice thead tr:nth-child(2) th:nth-child(10)
+{
+    border-top: none;
+    border-bottom: none;
+}
+.vehicle-invoice thead tr:first-child th:nth-child(2),
+.vehicle-invoice thead tr:nth-child(3) th:nth-child(2),.vehicle-invoice thead tr:nth-child(3) th:nth-child(3),.vehicle-invoice thead tr:nth-child(3) th:nth-child(4),.vehicle-invoice thead tr:nth-child(3) th:nth-child(5),.vehicle-invoice thead tr:nth-child(3) th:nth-child(6),.vehicle-invoice thead tr:nth-child(3) th:nth-child(7),.vehicle-invoice thead tr:nth-child(3) th:nth-child(8),
+.vehicle-invoice thead tr:nth-child(2) th:nth-child(6)
+{
+    border-bottom: 2px solid #000 !important;
+}
+.vehicle-invoice thead tr:nth-child(2) th:nth-child(2),.vehicle-invoice thead tr:nth-child(2) th:nth-child(3),.vehicle-invoice thead tr:nth-child(2) th:nth-child(4),.vehicle-invoice thead tr:nth-child(2) th:nth-child(5),.vehicle-invoice thead tr:nth-child(2) th:nth-child(7),.vehicle-invoice thead tr:nth-child(2) th:nth-child(8)
+{
+    border-bottom: none;
+}
+.vehicle-invoice thead tr:nth-child(3) th{
+  border-bottom: 2px solid #000;
+  border-top: none;
+}
+.vehicle-invoice thead tr th:last-child{
+    border-right: none !important;
 }
 .vehicle-invoice tbody tr td{
     border-right: 2px solid #000;

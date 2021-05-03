@@ -1,0 +1,22 @@
+.login-cmp{
+    margin-left:0px !important;
+   background-color: #f1f4f7 !important;
+
+}
+.login-img{
+    background-image: url("../../assets/images/1168x1080_Say\ Hello\ design.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.logo-login img{
+    max-width: 100%;
+    margin-left: -15px;
+   
+}
+.logo-login p{
+    text-align: left;
+    color: #a1a2a8;
+    font-size: 15px;
+    padding:25px 0 0 0px;
+}

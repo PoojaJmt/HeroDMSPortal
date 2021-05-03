@@ -17,7 +17,11 @@ export default {
   complaints:"/complaints",
   complaintInfo:"/complaint-info",
   newComplaint:"/new-complaint",
+  orders:"/orders",
+  orderdtl:"/orders/order-dtl",
+  invoicedtl:"/orders/invoice-info",
   profile: "/profile",
+
 
   // auth
   login: "/login",

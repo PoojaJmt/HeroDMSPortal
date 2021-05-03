@@ -57,7 +57,7 @@ function ComplaintsList() {
   };
   return (
     <Container fluid>
-     <Row>
+      <Row>
         <Col xl="5">
           <h4>Complaints</h4>
         </Col>
@@ -80,11 +80,13 @@ function ComplaintsList() {
         </Col>
       </Row>
       <Row>
-    <Col md={{ span: 4, offset: 8 }}>
-      <button className="btn-gen"><Link to="/new-complaint"> New Complaint</Link></button>
-    </Col>
-  </Row>
-  
+        <Col md={{ span: 4, offset: 8 }}>
+          <button className="btn-gen">
+            <Link to="/new-complaint"> New Complaint</Link>
+          </button>
+        </Col>
+      </Row>
+
       <Row>
         <Col xl="12">
           <AppBar position="static">
@@ -96,84 +98,75 @@ function ComplaintsList() {
               <Tab label="All" {...a11yProps(0)} />
               <Tab label="Pending" {...a11yProps(1)} />
               <Tab label="Resolved" {...a11yProps(2)} />
-
             </Tabs>
           </AppBar>
-          <TabPanel
-            value={value}
-            index={0}
-            className="customer-info-page"
-          >
-              <div className="tabspadding" style={{width:"100%",textAlign:"center"}}>
-          <TableContainer component={Paper}>
-            <Table className="customer-table">
-              <TableHead >
-                <TableRow >
-                  <TableCell>Complaint No.</TableCell>
-                  <TableCell>Complaint Date</TableCell>
-                  <TableCell>Category</TableCell>
-                  <TableCell>Sub Category</TableCell>
-                  <TableCell>Description</TableCell>
-                 
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                <TableRow>
-                  <TableCell>
-                    <Link to="/complaint-info">CN-12345</Link>
-                  </TableCell>
-                  <TableCell>24/04/2021</TableCell>
-                  <TableCell>Product Issue</TableCell>
-                  <TableCell>Damage in transit</TableCell>
-                  <TableCell>Foot mats damaged</TableCell>
-                 
-                </TableRow>
+          <TabPanel value={value} index={0} className="customer-info-page">
+            <div
+              className="tabspadding"
+              style={{ width: "100%", textAlign: "center" }}
+            >
+              <TableContainer component={Paper}>
+                <Table className="customer-table">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell>Complaint No.</TableCell>
+                      <TableCell>Complaint Date</TableCell>
+                      <TableCell>Category</TableCell>
+                      <TableCell>Sub Category</TableCell>
+                      <TableCell>Description</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell>
+                        <Link to="/complaint-info">CN-12345</Link>
+                      </TableCell>
+                      <TableCell>24/04/2021</TableCell>
+                      <TableCell>Product Issue</TableCell>
+                      <TableCell>Damage in transit</TableCell>
+                      <TableCell>Foot mats damaged</TableCell>
+                    </TableRow>
 
-                <TableRow>
-                  <TableCell>
-                    <Link to="/complaint-info">CN-12345</Link>
-                  </TableCell>
-                  <TableCell>24/04/2021</TableCell>
-                  <TableCell>Product Issue</TableCell>
-                  <TableCell>Damage in transit</TableCell>
-                  <TableCell>Foot mats damaged</TableCell>
-                 
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <Link to="/complaint-info">CN-12345</Link>
-                  </TableCell>
-                  <TableCell>24/04/2021</TableCell>
-                  <TableCell>Product Issue</TableCell>
-                  <TableCell>Damage in transit</TableCell>
-                  <TableCell>Foot mats damaged</TableCell>
-                 
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <Link to="/complaint-info">CN-12345</Link>
-                  </TableCell>
-                  <TableCell>24/04/2021</TableCell>
-                  <TableCell>Product Issue</TableCell>
-                  <TableCell>Damage in transit</TableCell>
-                  <TableCell>Foot mats damaged</TableCell>
-                 
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <Link to="/complaint-info">CN-12345</Link>
-                  </TableCell>
-                  <TableCell>24/04/2021</TableCell>
-                  <TableCell>Product Issue</TableCell>
-                  <TableCell>Damage in transit</TableCell>
-                  <TableCell>Foot mats damaged</TableCell>
-                 
-                </TableRow>
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </div>
-
+                    <TableRow>
+                      <TableCell>
+                        <Link to="/complaint-info">CN-12345</Link>
+                      </TableCell>
+                      <TableCell>24/04/2021</TableCell>
+                      <TableCell>Product Issue</TableCell>
+                      <TableCell>Damage in transit</TableCell>
+                      <TableCell>Foot mats damaged</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>
+                        <Link to="/complaint-info">CN-12345</Link>
+                      </TableCell>
+                      <TableCell>24/04/2021</TableCell>
+                      <TableCell>Product Issue</TableCell>
+                      <TableCell>Damage in transit</TableCell>
+                      <TableCell>Foot mats damaged</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>
+                        <Link to="/complaint-info">CN-12345</Link>
+                      </TableCell>
+                      <TableCell>24/04/2021</TableCell>
+                      <TableCell>Product Issue</TableCell>
+                      <TableCell>Damage in transit</TableCell>
+                      <TableCell>Foot mats damaged</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>
+                        <Link to="/complaint-info">CN-12345</Link>
+                      </TableCell>
+                      <TableCell>24/04/2021</TableCell>
+                      <TableCell>Product Issue</TableCell>
+                      <TableCell>Damage in transit</TableCell>
+                      <TableCell>Foot mats damaged</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </div>
           </TabPanel>
         </Col>
       </Row>

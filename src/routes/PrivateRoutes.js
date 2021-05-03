@@ -15,6 +15,9 @@ import CustomerDetails from './customers/customerDetails';
 import ComplaintsList from './complaints/complaintsList';
 import ComplaintInfo from './complaints/complaintInfo';
 import NewComplaint from './complaints/newComplaint';
+import orderList from './orders/orderList';
+import OrderDetails from './orders/orderDtl';
+import InvoiceDetails from './orders/invoiceinfo';
 
 const DashboardComponent = lazy(() => import('./dashboard'));
 
@@ -40,6 +43,9 @@ function PrivateRoutes() {
                 <Route exact path={SLUGS.complaints} component={ComplaintsList}/>
                 <Route exact path={SLUGS.complaintInfo} component={ComplaintInfo}/>
                 <Route exact path={SLUGS.newComplaint} component={NewComplaint}/>
+                <Route exact path={SLUGS.orders} component={orderList}/>
+                <Route exact path={SLUGS.orderdtl} component={OrderDetails}/>
+                <Route exact path={SLUGS.invoicedtl} component={InvoiceDetails}/>
 
                 
                 <Route exact path={SLUGS.profile} render={() => <div>profile</div>} />

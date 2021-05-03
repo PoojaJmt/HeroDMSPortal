@@ -8,6 +8,8 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { Link } from "react-router-dom";
+import Pagination from "@material-ui/lab/Pagination";
+
 import './customer.css';
 
 function CustomerComponent() {
@@ -106,6 +108,9 @@ function CustomerComponent() {
           </TableContainer>
         </div>
       </Row>
+      <div>
+      <Pagination count={10} shape="rounded" />
+      </div>
     </Container>
   );
 }

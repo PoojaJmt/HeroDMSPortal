@@ -7,6 +7,8 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import Pagination from "@material-ui/lab/Pagination";
+import Checkbox from '@material-ui/core/Checkbox';
 import { Link } from "react-router-dom";
 import "./invoices.css";
 
@@ -36,11 +38,12 @@ function InvoicesComponent() {
         </Col>
       </Row>
       <Row>
-        <div className="tabspadding" style={{width:"100%"}}>
+        <div className="tabspadding" style={{ width: "100%" }}>
           <TableContainer component={Paper}>
-            <Table>
+            <Table className="inv-table">
               <TableHead>
                 <TableRow>
+                  <TableCell style={{maxWidth:"40px"}}></TableCell>
                   <TableCell>Customer Id</TableCell>
                   <TableCell>First Name</TableCell>
                   <TableCell>Last Name</TableCell>
@@ -53,6 +56,51 @@ function InvoicesComponent() {
               </TableHead>
               <TableBody>
                 <TableRow>
+                  <TableCell style={{maxWidth:"40px"}}>
+                    <Checkbox
+                      value="checkedA"
+                      inputProps={{ "aria-label": "Checkbox A" }}
+                      color="secondary"
+                    />
+                  </TableCell>
+                  <TableCell>
+                    <Link to="/invoice-info">Enq-112</Link>
+                  </TableCell>
+                  <TableCell>Sukhbir</TableCell>
+                  <TableCell>Kaur</TableCell>
+                  <TableCell>1234567890</TableCell>
+                  <TableCell>Zion</TableCell>
+                  <TableCell>$50,000</TableCell>
+                  <TableCell>12/04/2021</TableCell>
+                  <TableCell>NYZ12345</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell style={{maxWidth:"40px"}}>
+                    <Checkbox
+                      value="checkedA"
+                      inputProps={{ "aria-label": "Checkbox A" }}
+                      color="secondary"
+                    />
+                  </TableCell>
+                  <TableCell>
+                    <Link to="/invoice-info">Enq-112</Link>
+                  </TableCell>
+                  <TableCell>Sukhbir</TableCell>
+                  <TableCell>Kaur</TableCell>
+                  <TableCell>1234567890</TableCell>
+                  <TableCell>Zion</TableCell>
+                  <TableCell>$50,000</TableCell>
+                  <TableCell>12/04/2021</TableCell>
+                  <TableCell>NYZ12345</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell style={{maxWidth:"40px"}}>
+                    <Checkbox
+                      value="checkedA"
+                      inputProps={{ "aria-label": "Checkbox A" }}
+                      color="secondary"
+                    />
+                  </TableCell>
                   <TableCell>
                     <Link to="/invoice-info">Enq-112</Link>
                   </TableCell>
@@ -69,6 +117,9 @@ function InvoicesComponent() {
           </TableContainer>
         </div>
       </Row>
+      <div>
+        <Pagination count={10} shape="rounded" />
+      </div>
     </Container>
   );
 }

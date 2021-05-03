@@ -122,8 +122,10 @@
     border: 1px solid rgb(228, 33, 38);
 }
 .heading{
-    color: rgb(185, 184, 184);
     font-size: 14px;
+    color: #7F8FA4;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 .subline{
     color: black;
@@ -293,7 +295,7 @@ a{
     flex-grow: 0;
     max-width: 100%;
     flex-basis: 100%;
-    margin-left: 37px !important;
+    margin-left: 37px;
 }
 .MuiTableContainer-root {
     width: 98% !important;
