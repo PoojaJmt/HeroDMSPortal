@@ -52,15 +52,12 @@ function PrivateRoutes() {
                 <Route exact path={SLUGS.complaints} component={ComplaintsList}/>
                 <Route exact path={SLUGS.complaintInfo} component={ComplaintInfo}/>
                 <Route exact path={SLUGS.newComplaint} component={NewComplaint}/>
-<<<<<<< HEAD
                 <Route exact path={SLUGS.orders} component={orderList}/>
                 <Route exact path={SLUGS.orderdtl} component={OrderDetails}/>
                 <Route exact path={SLUGS.invoicedtl} component={InvoiceDetails}/>
 
                 
-=======
                 <Route exact path={SLUGS.DashboardComponent} component={DashboardComponent}/>
->>>>>>> origin/shalu
                 <Route exact path={SLUGS.profile} render={() => <div>profile</div>} />
                 {/* <Redirect to={SLUGS.home} component={Home}/> */}
                 <Route exact path={SLUGS.home} component={Home}/>
