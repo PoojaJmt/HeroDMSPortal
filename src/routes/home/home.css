@@ -1,0 +1,106 @@
+.carouselimg{
+    height: 450px;
+    width: 100%;
+    margin: auto;
+}
+.homecard{
+    box-sizing: border-box;
+   background-image: url("../../assets/images/home.svg");
+   background-color: #E42126 !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 123px;
+}
+.homecardpadding{
+    border-radius: 20px !important;
+    /* padding: 30px; */
+    padding-top: 35px;
+    padding-right: 31px;
+    padding-left: 13px;
+}
+.yellowbox{
+    background: #FFA101;
+    font-size: 0px;
+    text-align: center;
+    margin-left: 21px;
+    border-radius: 30%;
+    padding: -10px;
+    width: 43px;
+    height: 43px;
+}
+.whiteheading{
+    font-size: 14px;
+    color: white;
+}
+.whiteheading1{
+    font-size: 16px;
+    color: white;
+    font-weight: 100;
+}
+.whiteheading3{
+    font-size: 10px;
+    color: white;
+    font-weight: 100;
+}
+.homesvgimg{
+    width: 26px;
+    padding: -17px;
+    margin-left: 9px;
+    padding-top: 9px;
+}
+.paragraph1{
+    font-size: 12px;
+    color: white;
+}
+.paragraph2{
+    font-size: 22px;
+    color: white;
+}
+.paragraph3{
+    font-size: 20px;
+    color: white;
+}
+.alink{
+    text-decoration: none !important;
+    color: black !important;
+}
+.congtainerpadding{
+    padding-top: 50px;
+}
+.homecardcontainer{
+    padding-top: 20px !important;
+}
+.inputtext{
+    width: 51px !important;
+}
+.equalcolumn{
+    width: 221px !important;
+}
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: white !important;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+@media screen and (max-width: 600px) {
+    .homecard{
+        box-sizing: border-box;
+       background-image: url("../../assets/images/home.svg");
+       background-color: #E42126 !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 123px;
+        margin: 12px;
+    }
+}

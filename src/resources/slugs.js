@@ -1,6 +1,5 @@
 export default {
   // private
-  home: "/home",
   // overview: '/overview',
   // overviewTwo: '/overview/two',
   // overviewThree: '/overview/three',
@@ -21,6 +20,16 @@ export default {
   orderdtl:"/orders/order-dtl",
   invoicedtl:"/orders/invoice-info",
   profile: "/profile",
+  DashboardComponent: "/dashboard",
+  home: "/home",
+  schemes: "/schemes",
+  schemeInfo: "/scheme-info",
+  ordersList: "/orders",
+  newOrders: "/new-order",
+  viewCart: "/view-cart",
+  profileData: '/profile-data',
+  stockStatus: '/stock-status',
+  outsstanding: '/outstanding',
 
 
   // auth

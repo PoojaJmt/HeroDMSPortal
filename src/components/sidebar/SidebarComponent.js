@@ -75,6 +75,7 @@ function SidebarComponent() {
         title="Invoices"
         icon="fa fa-file"
         onClick={() => onClick(SLUGS.invoices)}
+
       />
       <MenuItem
         title="Customers"
@@ -87,6 +88,7 @@ function SidebarComponent() {
         icon="fa fa-cube"
         id={SLUGS.orders}
         onClick={() => onClick(SLUGS.orders)}
+        // onClick={() => onClick(SLUGS.ordersList)}
       />
       <MenuItem
         id={SLUGS.scheme}
@@ -98,7 +100,7 @@ function SidebarComponent() {
       <MenuItem
         id={SLUGS.products}
         title="Products"
-        icon="fa fa-users"
+        icon="fas fa-truck-pickup"
         onClick={() => onClick(SLUGS.products)}
       />
 
@@ -108,7 +110,12 @@ function SidebarComponent() {
         icon="fa fa-user"
         onClick={() => onClick(SLUGS.complaints)}
       />
-      <MenuItem title="Dashboard" icon="fa fa-graph" />
+      
+      <MenuItem
+        title="Dashboard"
+        icon="fa fa-signal"
+        onClick={() => onClick(SLUGS.DashboardComponent)}
+      />
 
       <div className={classes.separator}></div>
 

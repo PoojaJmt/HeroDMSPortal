@@ -1,7 +1,16 @@
 .header-title{
     display: block !important;
-
+    color: #E42126;
+    margin-right: 19px;
 }
 .header-title h4{
 text-align: right;
+}
+.profileimg{
+    font-size: 20px;
+}
+.profilecolour{
+    color: #b7b6ce;
+    margin-left: 57px;
+    font-size: 18px;
 }

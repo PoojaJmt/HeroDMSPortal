@@ -58,12 +58,12 @@
     vertical-align: inherit;
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    color: rgb(228, 33, 38) !important;
+    color: #E42126 !important;
     background-color: #fff;
     font-size: 19px;
     border-color: 1px solid lightgrey !important;
     font-weight: 600;
-    border-bottom: 3px solid rgb(228, 33, 38) !important;
+    border-bottom: 3px solid #E42126 !important;
 }
 .nav-tabs {
      border-bottom: 1px solid lightgrey !important;
@@ -111,21 +111,20 @@
     font-size: 12px;
 }
 .resubmit-btn {
-    background: rgb(228, 33, 38) 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px rgb(228, 33, 38);
+    background: #E42126 0% 0% no-repeat padding-box;
+    /* box-shadow: 0px 3px 6px #E42126; */
     border-radius: 4px;
     height: 38px;
     padding: 0 10px;
     float: right;
     color: white;
     width: 130px;
-    border: 1px solid rgb(228, 33, 38);
+    border: 1px solid #E42126;
 }
 .heading{
-    font-size: 14px;
     color: #7F8FA4;
+    font-size: 14px;
     font-weight: 500;
-    margin-bottom: 5px;
 }
 .subline{
     color: black;
@@ -133,11 +132,11 @@
 }
 .card-title {
     margin-bottom: 2.75rem;
-    color: rgb(228, 33, 38);
+    color: #E42126;
 }
 #hrline{
     font-weight: 600px;
-    border-color: rgb(228, 33, 38);
+    border-color: #E42126;
     height: 5px;
     width: 14%;
     text-align: left;
@@ -154,13 +153,12 @@
 }
 .creditcardbody{
     padding-top: 10px !important;
-    box-shadow: 3px 3px 5px #aaaaaa;
+    /* box-shadow: 3px 3px 5px #aaaaaa; */
 }
 .teamcardbody{
     padding-top: 6px !important;
     height: 100px;
     font-size: 12px;
-    box-shadow: 3px 3px 5px #aaaaaa;
 }
 
 .step { 
@@ -224,7 +222,7 @@
     display: none !important;
 }
 .MuiPaginationItem-page.Mui-selected {
-    background-color: rgb(228, 33, 38) !important;
+    background-color: #E42126 !important;
     color: white;
 }
 .MuiPagination-root{
@@ -242,15 +240,15 @@
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    box-shadow: 3px 3px 5px #aaaaaa;
+    box-shadow: 1px 1px 0px #aaaaaa;
 }
 a{
     font-size: 13px;
     padding-top: 16px;
-    color: rgb(228, 33, 38);
+    color: #E42126
 }
 .linkfile{
-    color: rgb(228, 33, 38);
+    color: #E42126;
 }
 .MuiIconButton-label {
     width: 100%;
@@ -280,6 +278,7 @@ a{
 .MuiTableCell-body {
     color: rgba(0, 0, 0, 0.87);
     border: 1px solid white !important;
+    width: 0% !important;
 }
 .MuiTableRow-head{
     height: 51px !important;
@@ -300,4 +299,65 @@ a{
 .MuiTableContainer-root {
     width: 98% !important;
     overflow-x: auto;
+}
+.profilecontainer{
+    padding-left: 15px;
+}
+.profilearrow{
+    font-size: 172px;
+}
+.profilepadding{
+    padding-top: 70px;
+}
+.profileheading {
+    color: #7F8FA4;
+    font-size: 17px;
+    font-weight: 500;
+}
+.makeStyles-paper-1 {
+    width: 72% !important;
+    border: 2px solid #000;
+    padding: 16px 32px 24px;
+    position: fixed !important;
+    box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%), 0px 5px 8px 0px rgb(0 0 0 / 14%), 0px 1px 14px 0px rgb(0 0 0 / 12%);
+    background-color: #fff;
+    top: 43% !important;
+    left: 50% !important;
+}
+#simple-modal-title{
+    font-size: 22px !important;
+    text-align: center !important;
+    color: #E42126 !important;
+}
+.cancelbtn{
+    background: white 0% 0% no-repeat padding-box;
+    /* box-shadow: 0px 3px 6px #E42126; */
+    border-radius: 4px;
+    height: 38px;
+    padding: 0 10px;
+    float: right;
+    color: #E42126;
+    width: 130px;
+    border: 1px solid #E42126;
+}
+.btncontainer{
+    width: 30% !important;
+    margin: auto;
+    margin-top: 40px;
+}
+.react-datepicker-wrapper {
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    border: 1px solid #ced4da !important;
+    width: 100% !important;
+    border-radius: 4px !important;
+    height: 39px !important;
+}
+.react-datepicker-ignore-onclickoutside{
+    border: 1px solid white !important;
+}
+button, input {
+    overflow: visible;
+    border: 1px solid white;
 }
