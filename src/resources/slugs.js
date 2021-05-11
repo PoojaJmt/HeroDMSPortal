@@ -7,7 +7,7 @@ export default {
   invoiceInfo: "/invoice-info",
   invoicedownload: "/download-invoice",
   products: "/products",
-  productInfo: "/Product-info",
+  productInfo: "/Product-info/:productId",
   scheme: "/scheme-claims",
   ClaimInfo: "/claim-info",
   customers: "/customers",
@@ -29,7 +29,7 @@ export default {
   viewCart: "/view-cart",
   profileData: '/profile-data',
   stockStatus: '/stock-status',
-  outsstanding: '/outstanding',
+  outstanding: '/outstanding',
 
 
   // auth

@@ -67,7 +67,7 @@
 }
 .nav-tabs {
      border-bottom: 1px solid lightgrey !important;
-     margin-left: -37px;
+   
 }
 .nav-tabs .nav-link {
     margin-bottom: -1px;
@@ -88,7 +88,7 @@
     font-weight: 600 !important;
 }
 .tab-content{
-    margin-left: -39px;
+   
     margin-right: -24px;
 }
 .MuiTableRow-root {
@@ -125,6 +125,7 @@
     color: #7F8FA4;
     font-size: 14px;
     font-weight: 500;
+    margin:5px 0;
 }
 .subline{
     color: black;

@@ -18,8 +18,8 @@ const useStyles = createUseStyles({
     },
     paddingLeft: ({ level }) => 32 * level,
     transition: "all 0.2s ease-in-out",
-    paddingTop:"15px",
-    paddingBottom:"15px"
+    paddingTop:"10px",
+    paddingBottom:"10px"
   },
 
   title: {
@@ -69,7 +69,12 @@ function MenuItemComponent({
         onClick={onItemClicked}
         className={`${classNameContainer} menuitem`}
       >
-        <i className={icon} style={{color:iconColor}}/>
+
+        {/* <i className={icon} style={{color:iconColor}}/> */}
+        {/* <img src={icon} fill={iconColor} opacity={!isActive && '0.4'}/> */}
+        <div className={isActive ? "menu-icon active-side" : "menu-icon not-active"}>
+        {icon}
+        </div>
         <span className={classes.title}>{title}</span>
       </Row>
       <div className="outl"></div>

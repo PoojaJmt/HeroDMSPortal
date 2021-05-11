@@ -1,4 +1,4 @@
-import IconCheckboxOff from './checkbox-off';
+
 import IconCheckboxOn from './checkbox-on';
 import IconAgents from './icon-agents';
 import IconArrowUp from './icon-arrow-up';
@@ -14,9 +14,10 @@ import IconSearch from './icon-search';
 import IconSettings from './icon-settings';
 import IconSubscription from './icon-subscription';
 import IconTickets from './icon-tickets';
+import ScooterIcon from './scooter';
 
 export {
-    IconCheckboxOff,
+    
     IconCheckboxOn,
     IconAgents,
     IconArrowUp,
@@ -31,5 +32,6 @@ export {
     IconSearch,
     IconSettings,
     IconSubscription,
-    IconTickets
+    IconTickets,
+    ScooterIcon
 };

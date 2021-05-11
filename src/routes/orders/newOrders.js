@@ -50,12 +50,12 @@ export default function NewOrders() {
             <Container fluid className="containerpadding">
                 <Row>
                     <div className="col-md-4">
-                        <div className="product-card">
+                        <div className="order-card">
                             <div className="product-card-top">
-                                <div className="product-col-left">
-                                    <Image src={scooty} className="scootyimg" />
+                                <div className="order-col-left">
+                                    <Image src={scooty} className="scootyimg"  />
                                 </div>
-                                <div className="product-col-right">
+                                <div className="order-col-right">
                                     <h2>
                                         <b>Optima</b>
                                     </h2>
@@ -75,188 +75,18 @@ export default function NewOrders() {
                                     </Form.Group>
                                 </div>
                             </div>
-                            <div className="product-bottom">
-                                <div className="product-btm-right">
+                            <div className="order-bottom">
+                             
                                     <button type="button" className="btn btn-default addtocardbtn">Add to cart</button>
                                     {/* <button type="button" className="btn btn-default addtocardbtngreen">Added to Cart</button> */}
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
-                        <div className="product-card">
-                            <div className="product-card-top">
-                                <div className="product-col-left">
-                                    <Image src={scooty} className="scootyimg" />
-                                </div>
-                                <div className="product-col-right">
-                                    <h2>
-                                        <b>Optima</b>
-                                    </h2>
-                                    <p className="optimap">NDP : ₹ 41,770</p>
-                                    <Form.Group controlId="exampleForm.ControlSelect1">
-                                        <Form.Label>Colour</Form.Label>
-                                        <Form.Control as="select">
-                                            <option value="" disabled selected hidden>Select Colour</option>
-                                            <option>Blue</option>
-                                            <option>Red</option>
-                                            <option>Black</option>
-                                        </Form.Control>
-                                    </Form.Group>
-                                    <Form.Group controlId="formGroupPassword">
-                                        <Form.Label>Enter Quantity</Form.Label>
-                                        <Form.Control type="quantity" placeholder="Enter Quantity" />
-                                    </Form.Group>
-                                </div>
-                            </div>
-                            <div className="product-bottom">
-                                <div className="product-btm-right">
-                                    <button type="button" className="btn btn-default addtocardbtn">Add to cart</button>
-                                    {/* <button type="button" className="btn btn-default addtocardbtngreen">Added to Cart</button> */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="product-card">
-                            <div className="product-card-top">
-                                <div className="product-col-left">
-                                    <Image src={scooty} className="scootyimg" />
-                                </div>
-                                <div className="product-col-right">
-                                    <h2>
-                                        <b>Optima</b>
-                                    </h2>
-                                    <p className="optimap">NDP : ₹ 41,770</p>
-                                    <Form.Group controlId="exampleForm.ControlSelect1">
-                                        <Form.Label>Colour</Form.Label>
-                                        <Form.Control as="select">
-                                            <option value="" disabled selected hidden>Select Colour</option>
-                                            <option>Blue</option>
-                                            <option>Red</option>
-                                            <option>Black</option>
-                                        </Form.Control>
-                                    </Form.Group>
-                                    <Form.Group controlId="formGroupPassword">
-                                        <Form.Label>Enter Quantity</Form.Label>
-                                        <Form.Control type="quantity" placeholder="Enter Quantity" />
-                                    </Form.Group>
-                                </div>
-                            </div>
-                            <div className="product-bottom">
-                                <div className="product-btm-right">
-                                    <button type="button" className="btn btn-default addtocardbtn">Add to cart</button>
-                                    {/* <button type="button" className="btn btn-default addtocardbtngreen">Added to Cart</button> */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                 
 
-                </Row><br />
-                <Row>
-                    <div className="col-md-4">
-                        <div className="product-card">
-                            <div className="product-card-top">
-                                <div className="product-col-left">
-                                    <Image src={scooty} className="scootyimg" />
-                                </div>
-                                <div className="product-col-right">
-                                    <h2>
-                                        <b>Optima</b>
-                                    </h2>
-                                    <p className="optimap">NDP : ₹ 41,770</p>
-                                    <Form.Group controlId="exampleForm.ControlSelect1">
-                                        <Form.Label>Colour</Form.Label>
-                                        <Form.Control as="select">
-                                            <option value="" disabled selected hidden>Select Colour</option>
-                                            <option>Blue</option>
-                                            <option>Red</option>
-                                            <option>Black</option>
-                                        </Form.Control>
-                                    </Form.Group>
-                                    <Form.Group controlId="formGroupPassword">
-                                        <Form.Label>Enter Quantity</Form.Label>
-                                        <Form.Control type="quantity" placeholder="Enter Quantity" />
-                                    </Form.Group>
-                                </div>
-                            </div>
-                            <div className="product-bottom">
-                                <div className="product-btm-right">
-                                    <button type="button" className="btn btn-default addtocardbtn">Add to cart</button>
-                                    {/* <button type="button" className="btn btn-default addtocardbtngreen">Added to Cart</button> */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="product-card">
-                            <div className="product-card-top">
-                                <div className="product-col-left">
-                                    <Image src={scooty} className="scootyimg" />
-                                </div>
-                                <div className="product-col-right">
-                                    <h2>
-                                        <b>Optima</b>
-                                    </h2>
-                                    <p className="optimap">NDP : ₹ 41,770</p>
-                                    <Form.Group controlId="exampleForm.ControlSelect1">
-                                        <Form.Label>Colour</Form.Label>
-                                        <Form.Control as="select">
-                                            <option value="" disabled selected hidden>Select Colour</option>
-                                            <option>Blue</option>
-                                            <option>Red</option>
-                                            <option>Black</option>
-                                        </Form.Control>
-                                    </Form.Group>
-                                    <Form.Group controlId="formGroupPassword">
-                                        <Form.Label>Enter Quantity</Form.Label>
-                                        <Form.Control type="quantity" placeholder="Enter Quantity" />
-                                    </Form.Group>
-                                </div>
-                            </div>
-                            <div className="product-bottom">
-                                <div className="product-btm-right">
-                                    <button type="button" className="btn btn-default addtocardbtn">Add to cart</button>
-                                    {/* <button type="button" className="btn btn-default addtocardbtngreen">Added to Cart</button> */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="product-card">
-                            <div className="product-card-top">
-                                <div className="product-col-left">
-                                    <Image src={scooty} className="scootyimg" />
-                                </div>
-                                <div className="product-col-right">
-                                    <h2>
-                                        <b>Optima</b>
-                                    </h2>
-                                    <p className="optimap">NDP : ₹ 41,770</p>
-                                    <Form.Group controlId="exampleForm.ControlSelect1">
-                                        <Form.Label>Colour</Form.Label>
-                                        <Form.Control as="select">
-                                            <option value="" disabled selected hidden>Select Colour</option>
-                                            <option>Blue</option>
-                                            <option>Red</option>
-                                            <option>Black</option>
-                                        </Form.Control>
-                                    </Form.Group>
-                                    <Form.Group controlId="formGroupPassword">
-                                        <Form.Label>Enter Quantity</Form.Label>
-                                        <Form.Control type="quantity" placeholder="Enter Quantity" />
-                                    </Form.Group>
-                                </div>
-                            </div>
-                            <div className="product-bottom">
-                                <div className="product-btm-right">
-                                    <button type="button" className="btn btn-default addtocardbtn">Add to cart</button>
-                                    {/* <button type="button" className="btn btn-default addtocardbtngreen">Added to Cart</button> */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </Row>
+              
 
             </Container>
         </React.Fragment>

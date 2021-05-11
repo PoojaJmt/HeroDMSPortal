@@ -22,7 +22,6 @@ import DashboardComponent from './dashboard/DashboardComponent'
 import Home from './home/home'
 import Schemes from '../routes/home/schemes'
 import SchemeInfo from '../routes/home/schemeInfo'
-import OrdersList from '../routes/orders/ordersList'
 import NewOrders from '../routes/orders/newOrders'
 import ViewCart from './orders/viewCart';
 import ProfileData from '../routes/profile/profile'
@@ -59,16 +58,15 @@ function PrivateRoutes() {
                 
                 <Route exact path={SLUGS.DashboardComponent} component={DashboardComponent}/>
                 <Route exact path={SLUGS.profile} render={() => <div>profile</div>} />
-                {/* <Redirect to={SLUGS.home} component={Home}/> */}
+               
                 <Route exact path={SLUGS.home} component={Home}/>
                 <Route exact path={SLUGS.schemes} component={Schemes}/>
                 <Route exact path={SLUGS.schemeInfo} component={SchemeInfo}/>
-                <Route exact path={SLUGS.ordersList} component={OrdersList}/>
                 <Route exact path={SLUGS.newOrders} component={NewOrders}/>
                 <Route exact path={SLUGS.viewCart} component={ViewCart}/>
                 <Route exact path={SLUGS.profileData} component={ProfileData}/>
                 <Route exact path={SLUGS.stockStatus} component={StockStatus}/>
-                <Route exact path={SLUGS.outstnding} component={Outstanding}/>
+                <Route exact path={SLUGS.outstanding} component={Outstanding}/>
 
 
 

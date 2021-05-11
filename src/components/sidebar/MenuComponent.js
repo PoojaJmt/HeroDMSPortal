@@ -43,8 +43,9 @@ const getMenuStyles = ({ theme }) => ({
         fill: theme.color.veryDarkGrayishBlue
     },
     bmOverlay: {
-        background: '#ffffff',
-        zIndex: 20
+        background: '#000000',
+        zIndex: 20,
+        opacity:0.5
     }
 });
 

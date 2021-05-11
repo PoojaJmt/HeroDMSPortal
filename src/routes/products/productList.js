@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Row,
@@ -7,61 +7,51 @@ import {
   Form,
   InputGroup,
   Table,
+  Tabs,
+  Tab,
 } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import scooty from "../../assets/images/scooty.png";
 import "./products.css";
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
+import { useDispatch, useSelector } from "react-redux";
+import {
+  GetDealerProductsActionFn,
+  GetProductsActionFn,
+} from "redux/actions/productAction";
+import AllProducts from "./allproducts";
+import DealerProducts from "./dealerproducts";
 
 function ProductList() {
-  const [value, setValue] = React.useState(0);
+  const history = useHistory();
+  const dispatch = useDispatch();
+  const LoginData = useSelector((state) => state.LoginData.loginSuccesData);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  const [allpro, getallpro] = useState(true);
+  const [dealerpro, getdealerpro] = useState(false);
+
   return (
     <Container fluid>
       <Row>
-        <Col xl="5"></Col>
+        <Col xl="5">
+          <div className="switches">
+            <button
+              className={allpro === true ? "active" : ""}
+              onClick={()=>getallpro(true)}
+            >
+              Customer Price List
+            </button>
+            <button
+              onClick={()=>getallpro(false)}
+              className={allpro === false ? "active" : ""}
+            >
+              Dealer Price List
+            </button>
+          </div>
+        </Col>
         <Col xl="2">
           {/* <button className="refresh-btn">
             <i className="fa fa-refresh"></i> Reload
@@ -83,170 +73,7 @@ function ProductList() {
 
       <Row>
         <Col xl="12">
-          <AppBar position="static">
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              aria-label="simple tabs example"
-            >
-              <Tab label="All" {...a11yProps(0)} />
-              <Tab label="City Speed" {...a11yProps(1)} />
-              <Tab label="Comfort Speed" {...a11yProps(1)} />
-            </Tabs>
-          </AppBar>
-          <TabPanel value={value} index={0} className="invoice-dtl-tab">
-            <Row>
-              <div className="col-md-6">
-                <div className="product-card">
-                   <div className="product-card-top">
-                  <div className="product-col-left">
-                    <h2>OPTIMA E2</h2>
-                    <h3>₹ 52,000</h3>
-                    <ul>
-                      <li>RANGE</li>
-                      <li>85 KMPH</li>
-                    </ul>
-                    <ul>
-                      <li>BATTERY</li>
-                      <li>1</li>
-                    </ul>
-                  </div>
-                  <div className="product-col-center">
-                    <img src={scooty} />
-                  </div>
-                  <div className="product-col-right">
-                    <h2>
-                      4-5 <span>Hours</span>
-                    </h2>
-                    <p>CHARGING TIME</p>
-                  </div>
-                  </div>
-                  <div className="product-bottom">
-                      <div className="product-btm-left">
-                          <h2>Lithium Ion</h2>
-                          <p>Battery Type</p>
-                      </div>
-                      <div className="product-btm-right">
-                          <Link to="/product-info">More Details</Link>
-                      </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="product-card">
-                   <div className="product-card-top">
-                  <div className="product-col-left">
-                    <h2>OPTIMA E2</h2>
-                    <h3>₹ 52,000</h3>
-                    <ul>
-                      <li>RANGE</li>
-                      <li>85 KMPH</li>
-                    </ul>
-                    <ul>
-                      <li>BATTERY</li>
-                      <li>1</li>
-                    </ul>
-                  </div>
-                  <div className="product-col-center">
-                    <img src={scooty} />
-                  </div>
-                  <div className="product-col-right">
-                    <h2>
-                      4-5 <span>Hours</span>
-                    </h2>
-                    <p>CHARGING TIME</p>
-                  </div>
-                  </div>
-                  <div className="product-bottom">
-                      <div className="product-btm-left">
-                          <h2>Lithium Ion</h2>
-                          <p>Battery Type</p>
-                      </div>
-                      <div className="product-btm-right">
-                      <Link to="/product-info">More Details</Link>
-                      </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="product-card">
-                   <div className="product-card-top">
-                  <div className="product-col-left">
-                    <h2>OPTIMA E2</h2>
-                    <h3>₹ 52,000</h3>
-                    <ul>
-                      <li>RANGE</li>
-                      <li>85 KMPH</li>
-                    </ul>
-                    <ul>
-                      <li>BATTERY</li>
-                      <li>1</li>
-                    </ul>
-                  </div>
-                  <div className="product-col-center">
-                    <img src={scooty} />
-                  </div>
-                  <div className="product-col-right">
-                    <h2>
-                      4-5 <span>Hours</span>
-                    </h2>
-                    <p>CHARGING TIME</p>
-                  </div>
-                  </div>
-                  <div className="product-bottom">
-                      <div className="product-btm-left">
-                          <h2>Lithium Ion</h2>
-                          <p>Battery Type</p>
-                      </div>
-                      <div className="product-btm-right">
-                      <Link to="/product-info">More Details</Link>
-                      </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="product-card">
-                   <div className="product-card-top">
-                  <div className="product-col-left">
-                    <h2>OPTIMA E2</h2>
-                    <h3>₹ 52,000</h3>
-                    <ul>
-                      <li>RANGE</li>
-                      <li>85 KMPH</li>
-                    </ul>
-                    <ul>
-                      <li>BATTERY</li>
-                      <li>1</li>
-                    </ul>
-                  </div>
-                  <div className="product-col-center">
-                    <img src={scooty} />
-                  </div>
-                  <div className="product-col-right">
-                    <h2>
-                      4-5 <span>Hours</span>
-                    </h2>
-                    <p>CHARGING TIME</p>
-                  </div>
-                  </div>
-                  <div className="product-bottom">
-                      <div className="product-btm-left">
-                          <h2>Lithium Ion</h2>
-                          <p>Battery Type</p>
-                      </div>
-                      <div className="product-btm-right">
-                      <Link to="/product-info">More Details</Link>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </Row>
-          </TabPanel>
-          <TabPanel
-            value={value}
-            index={1}
-            className="invoice-dtl-tab"
-          ></TabPanel>
+          {allpro === true ? <AllProducts /> : <DealerProducts />}
         </Col>
       </Row>
     </Container>

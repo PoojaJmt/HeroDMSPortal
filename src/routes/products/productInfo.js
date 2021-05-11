@@ -1,60 +1,82 @@
 import React, { useState, useEffect } from "react";
 import MaterialTable from "material-table";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "../schemeclaims/scheme.css";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { StepperNav } from "vertical-stepper-nav";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
-import { Form, InputGroup, Table } from "react-bootstrap";
+import { Form, InputGroup, Table, Tabs, Tab } from "react-bootstrap";
 
 import PropTypes from "prop-types";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  GetDealerProductsActionFn,
+  GetProductsActionFn,
+} from "redux/actions/productAction";
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+function ProductInfo(props) {
+  const history = useHistory();
+  const dispatch = useDispatch();
+  const Products = useSelector((state) => state.productsData.allProducts);
+  const DealerProd = useSelector((state) => state.productsData.dealerProducts);
+
+  const LoginData = useSelector((state) => state.LoginData.loginSuccesData);
+
+  const [prod, setProd] = useState([]);
+  const [dealerprod,setdealerProd] = useState([]);
+  const [id, setId] = useState(null);
+  const getProducts = () => {
+    let body = {
+      state_id: LoginData.state__c,
+      offset: 0,
+      limit: 10,
+    };
+
+    dispatch(GetProductsActionFn(body));
+
+    let data = {
+      state_id: LoginData.state__c,
+      price_id: "a089D000002nbZtQAI",
+    };
+
+    dispatch(GetDealerProductsActionFn(data));
+  };
+
+  useEffect(() => {
+    let Idd = Number(props.match.params.productId);
+
+    setId(Idd);
+    getProducts();
+  }, []);
+
+  useEffect(() => {
+    if (Products?.data && Products?.data?.length > 0 ) {
+      setProd(Products.data);
+    }
+     if (DealerProd?.data && DealerProd?.data?.length > 0) {
+      setdealerProd(DealerProd.data);
+    }
+  }, [Products]);
+
+  function getUnique(prod, comp) {
+    // store the comparison  values in array
+    const unique = prod
+      .map((e) => e[comp])
+
+      // store the indexes of the unique objects
+      .map((e, i, final) => final.indexOf(e) === i && i)
+
+      // eliminate the false indexes & return unique objects
+      .filter((e) => prod[e])
+      .map((e) => prod[e]);
+
+    return unique;
+  }
 
   return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
-
-function ProductInfo() {
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-  return (
-    <Container fluid>
+    <Container>
       <Row>
         <Col xl="5"></Col>
         <Col xl="2">
@@ -78,90 +100,182 @@ function ProductInfo() {
 
       <Row>
         <Col xl="12">
-          <AppBar position="static">
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              aria-label="simple tabs example"
-            >
-              <Tab label="Info" {...a11yProps(0)} />
-            </Tabs>
-          </AppBar>
-          <TabPanel value={value} index={0} className="invoice-dtl-tab">
-          <Container>
-            <br/>
-            <Row>
-              <Col md={3}>
-                <p className="heading">Model</p>
-                <p className="subline">Photon</p>
-              </Col>
-              <Col md={3}>
-                <p className="heading">Product Category</p>
-                <p className="subline">₹78990</p>
-              </Col>
-              <Col md={3}>
-                <p className="heading">Battery</p>
-                <p className="subline">
-                 1
-                </p>
-              </Col>
-              <Col md={3}>
-                <p className="heading">Battery Type</p>
-                <p className="subline">
-                 Lithium Ion
-                </p>
-              </Col>
+          <Tabs
+            defaultActiveKey="info"
+            transition={false}
+            id="noanim-tab-example"
+          >
+            <Tab eventKey="info" title="Info">
+              <Container className="invoice-dtl">
+                <br />
+                <Row>
+                {getUnique(prod, "id")
+                    .filter((pro) => pro.id === id)
+                    .map((product) => {
+                      return (
+                        <>
+                          <Col md={3}>
+                            <p className="heading">Model</p>
+                            <p className="subline">{product.name}</p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Product Category</p>
+                            <p className="subline">
+                              {product.product_category__c}
+                            </p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Battery</p>
+                            <p className="subline">{product.battery__c}</p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Battery Type</p>
+                            <p className="subline">{product.battery__c}</p>
+                          </Col>
 
-            </Row><br/>
-            <Row>
-              <Col md={3}>
-                <p className="heading">BLDC Hub Motor(in watt)</p>
-                <p className="subline">550 | 1200</p>
-              </Col>
-              <Col md={3}>
-                <p className="heading">Kerb Weight (in kg)</p>
-                <p className="subline">75</p>
-              </Col>
-              <Col md={3}>
-                <p className="heading">Range (in kmph)</p>
-                <p className="subline">
-                 95
-                </p>
-              </Col>
-              <Col md={3}>
-                <p className="heading">Ground Clearance (in mm)</p>
-                <p className="subline">
-                 140
-                </p>
-              </Col>
+                          <Col md={3}>
+                            <p className="heading">BLDC Hub Motor(in watt)</p>
+                            <p className="subline">
+                              {product.bldc_hub_motor_watt__c}
+                            </p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Kerb Weight (in kg)</p>
+                            <p className="subline">{product.kerb_weight__c}</p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Range (in kmph)</p>
+                            <p className="subline">
+                              {product.range_in_kmph__c}
+                            </p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Ground Clearance (in mm)</p>
+                            <p className="subline">
+                              {product.ground_clearance_in_mm__c}
+                            </p>
+                          </Col>
 
-            </Row><br/>
-            <Row>
-              <Col md={3}>
-                <p className="heading">Top Speed (in kmph)</p>
-                <p className="subline">42</p>
-              </Col>
-              <Col md={3}>
-                <p className="heading">Charging Time (in hrs)</p>
-                <p className="subline">3</p>
-              </Col>
-              <Col md={3}>
-                <p className="heading">Battery Capacity (in V|AH)</p>
-                <p className="subline">
-                 50.4V/40Ah
-                </p>
-              </Col>
-              <Col md={3}>
-                <p className="heading">Wheel Size(in inch)</p>
-                <p className="subline">
-                 12
-                </p>
-              </Col>
+                          <Col md={3}>
+                            <p className="heading">Top Speed (in kmph)</p>
+                            <p className="subline">{product.top_speed__c}</p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Charging Time (in hrs)</p>
+                            <p className="subline">
+                              {product.charging_time__c}
+                            </p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">
+                              Battery Capacity (in V|AH)
+                            </p>
+                            <p className="subline">
+                              {product.battery_capacity_in_v_ah__c}
+                            </p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Wheel Size(in inch)</p>
+                            <p className="subline">
+                              {product.wheel_size_in_inch__c}
+                            </p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Subsidy</p>
+                            <p className="subline">
+                              {product.subsidy_amount__c}
+                            </p>
+                          </Col>
+                        </>
+                      );
+                    })}
 
-            </Row>
-            </Container>
-            <br />
-          </TabPanel>
+                    {/*  */}
+
+                    {getUnique(dealerprod, "id")
+                    .filter((pro) => pro.id === id)
+                    .map((product) => {
+                      return (
+                        <>
+                          <Col md={3}>
+                            <p className="heading">Model</p>
+                            <p className="subline">{product.name}</p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Product Category</p>
+                            <p className="subline">
+                              {product.product_category__c}
+                            </p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Battery</p>
+                            <p className="subline">{product.battery__c}</p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Battery Type</p>
+                            <p className="subline">{product.battery__c}</p>
+                          </Col>
+
+                          <Col md={3}>
+                            <p className="heading">BLDC Hub Motor(in watt)</p>
+                            <p className="subline">
+                              {product.bldc_hub_motor_watt__c}
+                            </p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Kerb Weight (in kg)</p>
+                            <p className="subline">{product.kerb_weight__c}</p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Range (in kmph)</p>
+                            <p className="subline">
+                              {product.range_in_kmph__c}
+                            </p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Ground Clearance (in mm)</p>
+                            <p className="subline">
+                              {product.ground_clearance_in_mm__c}
+                            </p>
+                          </Col>
+
+                          <Col md={3}>
+                            <p className="heading">Top Speed (in kmph)</p>
+                            <p className="subline">{product.top_speed__c}</p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Charging Time (in hrs)</p>
+                            <p className="subline">
+                              {product.charging_time__c}
+                            </p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">
+                              Battery Capacity (in V|AH)
+                            </p>
+                            <p className="subline">
+                              {product.battery_capacity_in_v_ah__c}
+                            </p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Wheel Size(in inch)</p>
+                            <p className="subline">
+                              {product.wheel_size_in_inch__c}
+                            </p>
+                          </Col>
+                          <Col md={3}>
+                            <p className="heading">Subsidy</p>
+                            <p className="subline">
+                              {product.subsidy_amount__c}
+                            </p>
+                          </Col>
+                        </>
+                      );
+                    })}
+                </Row>
+              </Container>
+            </Tab>
+          </Tabs>
         </Col>
       </Row>
     </Container>

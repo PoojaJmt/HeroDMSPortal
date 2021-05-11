@@ -102,7 +102,7 @@ export default function AllList() {
 
             <div className="tabspadding">
                 <TableContainer component={Paper}>
-                    <Table>
+                    <Table className="customer-table">
                         <TableHead>
                             <TableRow>
                                 <TableCell />

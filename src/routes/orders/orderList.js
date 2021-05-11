@@ -27,6 +27,12 @@ export default function orderList() {
                         </Form.Group>
                     </Grid>
                 </Grid>
+                <Grid container spacing={3}>
+                    <Grid item xs={12}>
+                       <a href="/new-order"><button className="resubmit-btn">New Order</button></a>
+                    </Grid>
+                </Grid>
+
             </div>
             <div className="tabspadding">
                 <Grid container>

@@ -75,6 +75,9 @@ input[type="color"]:focus,
     color: #E42126 !important;
    
 }
+.MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: #E42126 !important;
+}
 .MuiButton-containedSecondary{
     background-color: #E42126 !important;
 }

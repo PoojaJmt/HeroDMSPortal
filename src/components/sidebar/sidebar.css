@@ -25,3 +25,32 @@
     border:none !important;
     border-color: #fff !important;
 }
+
+.menu-icon, .menu-icon svg {
+height: 25px;
+width: 25px;
+
+}
+.menuitem:hover .menu-icon svg{
+    fill: #E42126 !important;
+}
+.active-side svg{
+    fill: #E42126;
+}
+.not-active svg{
+    fill: #fff;
+}
+.logout-btn button{
+    background-color:#fff !important;
+    margin: 20px auto 0 auto;
+    color: #E42126 !important;
+    font-weight: 500 ;
+    padding:10px 0;
+    width: 90%;
+    border-radius: 4px;
+    display: block;
+   
+}
+.logout-btn{
+    padding:30px 0;
+}

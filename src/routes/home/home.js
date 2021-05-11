@@ -11,6 +11,7 @@ import outstanding from '../../assets/images/outstanding.svg'
 
 
 import '../home/home.css'
+import { Link } from "react-router-dom";
 export default function Home() {
     return (
         <React.Fragment>
@@ -49,7 +50,7 @@ export default function Home() {
             <Container fluid className="homecardcontainer">
                 <Row>
                     <Col md={3}>
-                        <a href="/schemes" className="alink">
+                        <Link to="/schemes" className="alink">
                             <div className="card homecard homecardpadding">
                                 <Row>
                                     <Col md={8}>
@@ -63,7 +64,7 @@ export default function Home() {
                                     </Col>
                                 </Row>
                             </div>
-                        </a>
+                        </Link>
                     </Col>
                     <Col md={3}>
                         <a href="" className="alink">
