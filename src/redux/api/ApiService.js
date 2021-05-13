@@ -28,6 +28,13 @@ export const getAllSchemeClaims = (data) =>{
 
 }
 
+// customers
+
+export const getAllCustomers = () =>{
+  return axiosVal().get(`customers/getCustmoer`);
+}
+
+
 
 
 // 

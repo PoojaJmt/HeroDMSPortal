@@ -60,15 +60,7 @@ function AllProducts() {
       setProd(Products.data);
       setLoading(false);
     }
-    // else if (prod?.length < 1){
-    //   setLoading(false );
-    //   setNodata(true);
-    // }
-  
-
-    // else if(DealerProducts?.data && DealerProducts?.data?.length > 0 && dealerpro === true){
-    //   setProd(DealerProducts.data);
-    // }
+   
   }, [Products]);
 
   console.log("pro", prod);

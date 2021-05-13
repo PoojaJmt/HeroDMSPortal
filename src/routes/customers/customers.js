@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col, Button, Form, InputGroup } from "react-bootstrap";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -11,8 +11,25 @@ import { Link } from "react-router-dom";
 import Pagination from "@material-ui/lab/Pagination";
 
 import './customer.css';
+import { useDispatch, useSelector } from "react-redux";
+import { GetCustomersActionFn } from "redux/actions/customerAction";
 
 function CustomerComponent() {
+  const dispatch = useDispatch();
+  const LoginData = useSelector((state) => state.LoginData.loginSuccesData);
+  const CustomersData = useSelector((state) => state.Customers.allcustomers.data);
+  
+
+
+  const getCustomers = () =>{
+ 
+    dispatch(GetCustomersActionFn());
+  }
+  useEffect(() => {
+    getCustomers();
+  }, []);
+
+  console.log(CustomersData)
   return (
     <Container fluid>
       <Row>
@@ -47,62 +64,27 @@ function CustomerComponent() {
                   <TableCell>Contact No.</TableCell>
                   <TableCell>Gender</TableCell>
                   <TableCell>Age</TableCell>
-                  <TableCell>Address</TableCell>
+                  <TableCell style={{width:"400px"}}>Address</TableCell>
                  
                 </TableRow>
               </TableHead>
               <TableBody>
-                <TableRow>
-                  <TableCell>
-                    <Link to="/customer-info">Sunil Sharma</Link>
-                  </TableCell>
-                  <TableCell>9876543210</TableCell>
-                  <TableCell>Male</TableCell>
-                  <TableCell>35</TableCell>
-                  <TableCell>Rajouri garden, Delhi</TableCell>
-                 
-                </TableRow>
+                {CustomersData?.result?.length > 0 && CustomersData?.result.map((customer,i)=>{
+                  return (
+                    <TableRow key={i}>
+                    <TableCell>
+                  <Link to={`/customer-info/${customer.id}`}>{customer.firstname} {customer.middlename} {customer.lastname}</Link>
+                    </TableCell>
+                  <TableCell>{customer.mobilephone}</TableCell>
+                  <TableCell>{customer.gender__c}</TableCell>
+                  <TableCell>{customer.age__c}</TableCell>
+                  <TableCell>{customer.address_line_1__c}</TableCell>
+                   
+                  </TableRow>
+                  )
+                })}
+               
 
-                <TableRow>
-                  <TableCell>
-                    <Link to="/invoice-info">Sunil Sharma</Link>
-                  </TableCell>
-                  <TableCell>9876543210</TableCell>
-                  <TableCell>Male</TableCell>
-                  <TableCell>35</TableCell>
-                  <TableCell>Rajouri garden, Delhi</TableCell>
-                 
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <Link to="/invoice-info">Sunil Sharma</Link>
-                  </TableCell>
-                  <TableCell>9876543210</TableCell>
-                  <TableCell>Male</TableCell>
-                  <TableCell>35</TableCell>
-                  <TableCell>Rajouri garden, Delhi</TableCell>
-                 
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <Link to="/invoice-info">Sunil Sharma</Link>
-                  </TableCell>
-                  <TableCell>9876543210</TableCell>
-                  <TableCell>Male</TableCell>
-                  <TableCell>35</TableCell>
-                  <TableCell>Rajouri garden, Delhi</TableCell>
-                 
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <Link to="/invoice-info">Sunil Sharma</Link>
-                  </TableCell>
-                  <TableCell>9876543210</TableCell>
-                  <TableCell>Male</TableCell>
-                  <TableCell>35</TableCell>
-                  <TableCell>Rajouri garden, Delhi</TableCell>
-                 
-                </TableRow>
               </TableBody>
             </Table>
           </TableContainer>

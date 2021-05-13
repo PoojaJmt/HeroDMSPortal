@@ -7,6 +7,7 @@ export const axiosVal = () => {
   const data = store.getState();
   const accessToken = data?.LoginData?.loginSuccesData?.token
   const state = data?.LoginData?.loginSuccesData?.state__c
+  const dealer = data?.LoginData?.loginSuccesData?.dealer__c
   console.log(data.LoginData.loginSuccesData)
 
   let token = accessToken;
@@ -17,7 +18,8 @@ export const axiosVal = () => {
     headers: {
       'Content-Type': 'application/json',
       'token': token,
-      'state__c':state
+      'state__c':state,
+      'dealer__c': dealer
 
     },
 

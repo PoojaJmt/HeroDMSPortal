@@ -7,14 +7,14 @@ a:hover{
 
 }
 .customer-table tr td{
-  padding:15px 10px 0 10px !important;
+  padding:20px 10px 10px 10px !important;
 }
 .customer-info-box {
   background-color: #f7dbdc;
   border: 1px solid #f7c1c4;
   border-radius: 4px;
   padding:10px;
-  max-width: 350px;
+  max-width: 450px;
   margin-top:30px;
 }
 

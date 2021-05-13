@@ -113,7 +113,12 @@ export default function Schemes() {
                       return (
                         <TableRow>
                           <TableCell>
-                            <Link to={{ pathname: "/scheme-info", state:scheme.schemesDetails }}>
+                            <Link
+                              to={{
+                                pathname: "/scheme-info",
+                                state: scheme.schemesDetails,
+                              }}
+                            >
                               <p>
                                 <b>{scheme.name}</b>
                               </p>
