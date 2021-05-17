@@ -24,7 +24,7 @@ import {
 } from "redux/actions/productAction";
 import ProductCard from "./productCard";
 
-function DealerProducts() {
+function DealerProducts(props) {
   const history = useHistory();
   const dispatch = useDispatch();
   const LoginData = useSelector((state) => state.LoginData.loginSuccesData);
@@ -73,7 +73,10 @@ function DealerProducts() {
     <Tabs defaultActiveKey="all" transition={false} id="noanim-tab-example">
       <Tab eventKey="all" title="All">
         <Row className="mt-5">
-          {getUnique(prod, "id").map((product) => {
+
+          {
+          getUnique(prod, "id").filter(pro=>pro.name.toLowerCase().includes(props.search.toLowerCase()))
+          .map((product) => {
             return (
               <ProductCard
                 productname={product.name}
@@ -87,10 +90,10 @@ function DealerProducts() {
           })}
         </Row>
       </Tab>
-      <Tab eventKey="cityspeed" title="City Speed">
+      <Tab eventKey="cityspeed" title="Low Speed">
         <Row className="mt-5">
           {getUnique(prod, "id")
-            .filter((pro) => pro.product_category__c.includes("City Speed"))
+            .filter((pro) => pro.product_category__c.includes("Low Speed"))
             .map((product) => {
               return (
                 <ProductCard
@@ -109,6 +112,7 @@ function DealerProducts() {
         <Row className="mt-5">
           {getUnique(prod, "id")
             .filter((pro) => pro.product_category__c.includes("High Speed"))
+            .filter(pro=>pro.name.toLowerCase().includes(props.search.toLowerCase()))
             .map((product) => {
               return (
                 <ProductCard

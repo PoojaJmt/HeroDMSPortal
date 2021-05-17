@@ -3,11 +3,16 @@ a:hover{
 }
 .customer-table tr td,
 .customer-table thead tr th {
-  text-align: center;
+  text-align: left;
+  padding-left: 10px !important;
+
 
 }
 .customer-table tr td{
-  padding:20px 10px 10px 10px !important;
+  padding:25px 10px 15px 10px !important;
+  border-bottom: 1px solid #ebebeb !important;
+  margin-right: 5px !important;
+  margin-left: 5px !important;
 }
 .customer-info-box {
   background-color: #f7dbdc;

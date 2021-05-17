@@ -32,6 +32,7 @@ function ProductList() {
 
   const [allpro, getallpro] = useState(true);
   const [dealerpro, getdealerpro] = useState(false);
+  const [searchTerm, setsearchTerm] = useState("");
 
   return (
     <Container fluid>
@@ -65,7 +66,9 @@ function ProductList() {
                   <i className="fa fa-search"></i>
                 </InputGroup.Text>
               </InputGroup.Prepend>
-              <Form.Control type="text" placeholder="Search product here.." />
+              <Form.Control type="text" placeholder="Search product here.." 
+              value={searchTerm} onChange={(e)=>setsearchTerm(e.target.value)}
+              />
             </InputGroup>
           </Form.Group>
         </Col>
@@ -73,7 +76,7 @@ function ProductList() {
 
       <Row>
         <Col xl="12">
-          {allpro === true ? <AllProducts /> : <DealerProducts />}
+          {allpro === true ? <AllProducts search={searchTerm} /> : <DealerProducts search={searchTerm}/>}
         </Col>
       </Row>
     </Container>

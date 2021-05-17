@@ -103,6 +103,7 @@ input[type="color"]:focus,
 .invoice-dtl ul li h5{
     font-size: 14px;
     color: #7F8FA4;
+    margin-bottom: 10px;
 }
 .invoice-dtl ul li p{
     font-size: 14px;

@@ -66,33 +66,7 @@ function Row(props) {
 
   return (
     <React.Fragment>
-      <TableRow>
-        <TableCell>
-          <IconButton
-            aria-label="expand row"
-            size="small"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <RemoveCircleOutline /> : <AddCircleOutline />}
-          </IconButton>
-        </TableCell>
-        <TableCell>
-          <Link to={{ pathname: "/claim-info" }}>
-            <p>
-              <b>ENQ-1102</b>
-            </p>
-          </Link>
-        </TableCell>
-        <TableCell component="th" scope="row">
-          {row.cusrtomername}
-        </TableCell>
-        <TableCell>{row.schemeapplied}</TableCell>
-        <TableCell>{row.claimsubmissiondate}</TableCell>
-        <TableCell>{row.schemeamount}</TableCell>
-        <TableCell>{row.expectedclaimamount}</TableCell>
-        <TableCell>{row.status}</TableCell>
-        <TableCell>{row.chassisno}</TableCell>
-      </TableRow>
+      
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
@@ -429,9 +403,33 @@ export default function AllList() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows.map((row) => (
-                <Row key={row.name} row={row} />
-              ))}
+            <TableRow>
+        <TableCell>
+          <IconButton
+            aria-label="expand row"
+            size="small"
+            // onClick={() => setOpen(!open)}
+          >
+            {/* {open1 ? <RemoveCircleOutline /> : <AddCircleOutline />} */}
+          </IconButton>
+        </TableCell>
+        <TableCell>
+          <Link to={{ pathname: "/claim-info" }}>
+            <p>
+              <b>ENQ-1102</b>
+            </p>
+          </Link>
+        </TableCell>
+        <TableCell>
+          sukhbir
+        </TableCell>
+        <TableCell>kaur</TableCell>
+        <TableCell>4578451100</TableCell>
+        <TableCell>₹ 50.00</TableCell>
+        <TableCell>₹ 10.00</TableCell>
+        <TableCell>Yes</TableCell>
+        <TableCell>NYXE030593</TableCell>
+      </TableRow>
             </TableBody>
           </Table>
         </TableContainer>

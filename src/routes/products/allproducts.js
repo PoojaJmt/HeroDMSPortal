@@ -10,12 +10,7 @@ import {
   Tabs,
   Tab,
 } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
-import PropTypes from "prop-types";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Box from "@material-ui/core/Box";
-import scooty from "../../assets/images/scooty.png";
+
 import "./products.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -25,20 +20,22 @@ import {
 } from "redux/actions/productAction";
 import ProductCard from "./productCard";
 
-function AllProducts() {
-  
+function AllProducts(props) {
   const dispatch = useDispatch();
   const LoginData = useSelector((state) => state.LoginData.loginSuccesData);
 
   const Products = useSelector((state) => state.productsData.allProducts);
-  const TaxDetails = useSelector((state)=>state.productsData.taxDetails);
+  const TaxDetails = useSelector((state) => state.productsData.taxDetails);
   const DealerProducts = useSelector(
     (state) => state.productsData.dealerProducts
   );
   const [loading, setLoading] = useState(true);
   const [prod, setProd] = useState([]);
+
   const [cityspeed, setcityspeed] = useState([]);
-  const [Nodata,setNodata] = useState(false)
+  const [Nodata, setNodata] = useState(false);
+  const [sgst, setsgst] = useState(null);
+  const [cgst, setcgst] = useState(null);
 
   const getProducts = () => {
     let body = {
@@ -48,7 +45,7 @@ function AllProducts() {
     };
 
     dispatch(GetProductsActionFn(body));
-    dispatch(GetTaxActionFn())
+    dispatch(GetTaxActionFn());
   };
 
   useEffect(() => {
@@ -60,10 +57,9 @@ function AllProducts() {
       setProd(Products.data);
       setLoading(false);
     }
-   
   }, [Products]);
 
-  console.log("pro", prod);
+  console.log("tax", TaxDetails.tax);
 
   return (
     <Tabs defaultActiveKey="all" transition={false} id="noanim-tab-example">
@@ -75,34 +71,57 @@ function AllProducts() {
             </div>
           ) : (
             <>
-            {Nodata ? <h4 className="ml-3">No products to show</h4> : 
-            prod.map((product) => {
-              return (
-                <ProductCard
-                  productname={product.name}
-                  price={product.price__c}
-                  battery_capacity={product.battery_capacity_in_v_ah__c}
-                  battery={product.battery__c}
-                  charging_time={product.charging_time__c}
-                  id={product.id}
-                />
-              );
-            })
-            }
-              
+              {Nodata ? (
+                <h4 className="ml-3">No products to show</h4>
+              ) : (
+                prod
+                  .filter((pro) =>pro.name.toLowerCase().includes(props.search.toLowerCase())
+                  )
+                  .map((product) => {
+                    let exshowroom;
+                    if (TaxDetails && TaxDetails.tax) {
+                      TaxDetails.tax.map((tax) => {
+                        var cgst = (product.price__c / 100) * tax.cgst__c;
+                        var sgst = (product.price__c / 100) * tax.sgst__c;
+
+                        exshowroom = product.price__c + cgst + sgst;
+                      });
+                    }
+
+                    return (
+                      <ProductCard
+                        productname={product.name}
+                        price={exshowroom}
+                        battery_capacity={product.battery_capacity_in_v_ah__c}
+                        battery={product.battery__c}
+                        charging_time={product.charging_time__c}
+                        id={product.id}
+                      />
+                    );
+                  })
+              )}
             </>
           )}
         </Row>
       </Tab>
-      <Tab eventKey="cityspeed" title="City Speed">
+      <Tab eventKey="cityspeed" title="Low Speed">
         <Row className="mt-5">
           {prod
-            .filter((pro) => pro.product_category__c.includes("City Speed"))
+            .filter((pro) => pro.product_category__c.includes("Low Speed"))
             .map((product) => {
+              let exshowroom;
+              if (TaxDetails && TaxDetails.tax) {
+                TaxDetails.tax.map((tax) => {
+                  var cgst = (product.price__c / 100) * tax.cgst__c;
+                  var sgst = (product.price__c / 100) * tax.sgst__c;
+
+                  exshowroom = product.price__c + cgst + sgst;
+                });
+              }
               return (
                 <ProductCard
                   productname={product.name}
-                  price={product.price__c}
+                  price={exshowroom}
                   battery_capacity={product.battery_capacity_in_v_ah__c}
                   battery={product.battery__c}
                   charging_time={product.charging_time__c}
@@ -117,10 +136,19 @@ function AllProducts() {
           {prod
             .filter((pro) => pro.product_category__c.includes("High Speed"))
             .map((product) => {
+              let exshowroom;
+              if (TaxDetails && TaxDetails.tax) {
+                TaxDetails.tax.map((tax) => {
+                  var cgst = (product.price__c / 100) * tax.cgst__c;
+                  var sgst = (product.price__c / 100) * tax.sgst__c;
+
+                  exshowroom = product.price__c + cgst + sgst;
+                });
+              }
               return (
                 <ProductCard
                   productname={product.name}
-                  price={product.price__c}
+                  price={exshowroom}
                   battery_capacity={product.battery_capacity_in_v_ah__c}
                   battery={product.battery__c}
                   charging_time={product.charging_time__c}

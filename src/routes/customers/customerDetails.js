@@ -48,8 +48,8 @@ function CustomerDetails(props) {
   return (
     <Container fluid>
       <Row>
-        <Col xl="9">
-          <h4>Customers</h4>
+        <Col xl="9" className="mb-5">
+          <h4>Customer Details</h4>
         </Col>
 
         <Col xl="3">
@@ -76,6 +76,7 @@ function CustomerDetails(props) {
                     )
                     .map((cust) => {
                       let todate = new Date(cust.enquiry[0].delivery_date__c);
+                      let acknowledge = cust.enquiry[0].acknowledgement__c;
                       return (
                         <>
                           <Row>
@@ -234,13 +235,13 @@ function CustomerDetails(props) {
                                 Certificate(for B2B)
                               </p>
                               <p className="subline">
-                                <Link to="/">View</Link>
+                                <a href={cust.enquiry[0].adhaar_card_front_and_back__c} target="_blank">View</a>
                               </p>
                             </Col>
                             <Col md={4}>
                               <p className="heading">Dealer Invoice</p>
                               <p className="subline">
-                                <Link to="/">View</Link>
+                                <a href={cust.enquiry[0].invoice__c} target="_blank">View</a>
                               </p>
                             </Col>
                           </Row>
@@ -249,7 +250,7 @@ function CustomerDetails(props) {
                             <Col md={8}>
                               <p className="heading">Insurance/RC/Tax Token</p>
                               <p className="subline">
-                                <Link to="/">View</Link>
+                                <a href={cust.enquiry[0].insurance__c} target="_blank">View</a>
                               </p>
                             </Col>
                             <Col md={4}>
@@ -257,7 +258,9 @@ function CustomerDetails(props) {
                                 Customer Acknowledgement(In case of subsidy)
                               </p>
                               <p className="subline">
-                                <Link to="/">View</Link>
+                                 
+                                <a href={cust.enquiry[0].acknowledgement__c} target="_blank"> View</a>
+                               
                               </p>
                             </Col>
                           </Row>
@@ -309,6 +312,7 @@ function CustomerDetails(props) {
                           })
                         );
                       })}
+                      
                 </Row>
               </Container>
             </Tab>
