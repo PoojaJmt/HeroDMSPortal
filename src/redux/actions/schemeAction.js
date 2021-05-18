@@ -5,7 +5,7 @@ export const GetSchemeClaimsActionFn = (data) => {
   return (dispatch) => {
     getSchemeClaims(data)
       .then((response) => {
-        debugger
+    
       
         if (response && response.status && response.status === 200) {
           dispatch({ type: GET_SCHEME_CLAIMS, payload: response});

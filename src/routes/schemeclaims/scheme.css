@@ -102,9 +102,16 @@
     margin-bottom: 50px;
 }
 .scheme-table{
-    margin: 30px auto;
+    margin: 0 auto 0 auto;
     width: 80%;
-    margin-left: 191px;
+    margin-left: 20%;
+}
+.scheme-table tr th{
+    color: #E42126;
+}
+
+.customer-table .scheme-table tr td{
+    border-bottom: none !important;
 }
 .trpadding{
     padding-top: 21px;
@@ -361,4 +368,7 @@ a{
 button, input {
     overflow: visible;
     border: 1px solid white;
+}
+#no-border-td{
+    border-bottom: none !important;
 }

@@ -73,7 +73,7 @@ function CustomerComponent() {
             <Table className="customer-table">
               <TableHead>
                 <TableRow>
-                  <TableCell>Customer Name</TableCell>
+                  <TableCell style={{width:"200px"}}>Customer Name</TableCell>
                   <TableCell>Contact No.</TableCell>
                   <TableCell>Gender</TableCell>
                   <TableCell>Age</TableCell>

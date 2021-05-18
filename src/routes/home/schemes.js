@@ -53,7 +53,7 @@ export default function Schemes() {
             <h4>Schemes</h4>
           </Grid>
           <Grid item xs={2}>
-            <button className="refresh-btn">
+            <button className="refresh-btn" onClick={()=>window.location.reload(true)}>
               <i className="fa fa-refresh"></i> Reload
             </button>
           </Grid>

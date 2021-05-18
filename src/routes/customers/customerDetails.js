@@ -235,13 +235,26 @@ function CustomerDetails(props) {
                                 Certificate(for B2B)
                               </p>
                               <p className="subline">
-                                <a href={cust.enquiry[0].adhaar_card_front_and_back__c} target="_blank">View</a>
+                                <a
+                                  href={
+                                    cust.enquiry[0]
+                                      .adhaar_card_front_and_back__c
+                                  }
+                                  target="_blank"
+                                >
+                                  View
+                                </a>
                               </p>
                             </Col>
                             <Col md={4}>
                               <p className="heading">Dealer Invoice</p>
                               <p className="subline">
-                                <a href={cust.enquiry[0].invoice__c} target="_blank">View</a>
+                                <a
+                                  href={cust.enquiry[0].invoice__c}
+                                  target="_blank"
+                                >
+                                  View
+                                </a>
                               </p>
                             </Col>
                           </Row>
@@ -250,7 +263,12 @@ function CustomerDetails(props) {
                             <Col md={8}>
                               <p className="heading">Insurance/RC/Tax Token</p>
                               <p className="subline">
-                                <a href={cust.enquiry[0].insurance__c} target="_blank">View</a>
+                                <a
+                                  href={cust.enquiry[0].insurance__c}
+                                  target="_blank"
+                                >
+                                  View
+                                </a>
                               </p>
                             </Col>
                             <Col md={4}>
@@ -258,9 +276,13 @@ function CustomerDetails(props) {
                                 Customer Acknowledgement(In case of subsidy)
                               </p>
                               <p className="subline">
-                                 
-                                <a href={cust.enquiry[0].acknowledgement__c} target="_blank"> View</a>
-                               
+                                <a
+                                  href={cust.enquiry[0].acknowledgement__c}
+                                  target="_blank"
+                                >
+                                  {" "}
+                                  View
+                                </a>
                               </p>
                             </Col>
                           </Row>
@@ -312,7 +334,6 @@ function CustomerDetails(props) {
                           })
                         );
                       })}
-                      
                 </Row>
               </Container>
             </Tab>

@@ -9,7 +9,7 @@ export default {
   products: "/products",
   productInfo: "/Product-info/:productId",
   scheme: "/scheme-claims",
-  ClaimInfo: "/claim-info",
+  ClaimInfo: "/claim-info/:claimid",
   customers: "/customers",
   customerInfo: "/customer-info/:customerId",
   customerDetails: "/customer-details/:customerId",

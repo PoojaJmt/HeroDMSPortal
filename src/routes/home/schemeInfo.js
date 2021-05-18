@@ -25,7 +25,7 @@ export default function SchemeInfo(props) {
           <Grid item xs={6}>
             <h4>Schemes</h4>
           </Grid>
-          <Grid item xs={2}>
+          {/* <Grid item xs={2}>
             <button className="refresh-btn">
               <i className="fa fa-refresh"></i> Reload
             </button>
@@ -41,7 +41,7 @@ export default function SchemeInfo(props) {
                 <Form.Control type="text" placeholder="Search here.." />
               </InputGroup>
             </Form.Group>
-          </Grid>
+          </Grid> */}
         </Grid>
       </div>
       <div className="tabspadding">

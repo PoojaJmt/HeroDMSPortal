@@ -51,9 +51,9 @@ function CustomerInfo(props) {
   
   return (
     <Container fluid>
-      <Row>
-        <Col xl="9">
-          <h4>Customers</h4>
+      <Row className="mb-4">
+        <Col xl="9" >
+          <h4>Customers </h4>
         </Col>
 
         <Col xl="3">
@@ -70,7 +70,7 @@ function CustomerInfo(props) {
             id="noanim-tab-example"
           >
             <Tab eventKey="info" title="Info">
-              <Container>
+              <Container className="mt-4">
                 <Row>
                   {CustomersData?.result?.length > 0 &&
                     CustomersData?.result

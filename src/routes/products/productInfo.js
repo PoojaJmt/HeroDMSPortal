@@ -77,12 +77,12 @@ function ProductInfo(props) {
 
   return (
     <Container>
-      <Row>
+      {/* <Row>
         <Col xl="5"></Col>
         <Col xl="2">
-          {/* <button className="refresh-btn">
+          <button className="refresh-btn">
             <i className="fa fa-refresh"></i> Reload
-          </button> */}
+          </button>
         </Col>
         <Col xl="5">
           <Form.Group className="search-customer">
@@ -96,7 +96,7 @@ function ProductInfo(props) {
             </InputGroup>
           </Form.Group>
         </Col>
-      </Row>
+      </Row> */}
 
       <Row>
         <Col xl="12">
