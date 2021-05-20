@@ -60,6 +60,7 @@ function AllProducts(props) {
   }, [Products]);
 
   console.log("tax", TaxDetails.tax);
+  console.log(Products)
 
   return (
     <Tabs defaultActiveKey="all" transition={false} id="noanim-tab-example">

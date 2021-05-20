@@ -7,3 +7,4 @@ export const GET_MASTER_SCHEME = "GET_MASTER_SCHEME";
 export const GET_TAX = "GET_TAX";
 export const LOGOUT = "LOGOUT";
 export const GET_CUSTOMERS = "GET_CUSTOMERS";
+export const GET_INVOICE = "GET_INVOICE";

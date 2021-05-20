@@ -34,6 +34,11 @@ export const getAllCustomers = () =>{
   return axiosVal().get(`customers/getCustmoer`);
 }
 
+// invoices
+export const getAllInvoices = (id) =>{
+  return axiosVal().get(`/invoice/GetCustomerInvoice?id=${id}`)
+}
+
 
 
 
